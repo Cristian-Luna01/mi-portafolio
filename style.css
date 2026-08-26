@@ -1,0 +1,38 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.tarjeta-habilidad {
+    border: 1px solid white; /* borde exterior */
+    padding: 20px;          /* espacio interior */
+    width: 300px;           /* ancho */
+}
+
+.contenedor-habilidades {
+    display: flex;              /* organiza a sus hijos usando Flexbox */
+    gap: 20px;                  /* espacio entre los hijos */
+    justify-content: center;    /* centra los hijos en el eje principal */
+    flex-wrap: wrap;            /* permite que bajen de fila si no caben */
+}
+
+section {
+    padding: 80px 40px; /* espacio interior: 80px arriba/abajo y 40px izquierda/derecha */
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding: 20px 40px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    margin: 20px;
+}
