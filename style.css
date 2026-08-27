@@ -2,7 +2,7 @@ body {
     background-color: black;
     color: white;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 a {
@@ -11,28 +11,90 @@ a {
 }
 
 .tarjeta-habilidad {
-    border: 1px solid white; /* borde exterior */
-    padding: 20px;          /* espacio interior */
-    width: 300px;           /* ancho */
+    border: 1px solid white;
+    /* borde exterior */
+    padding: 20px;
+    /* espacio interior */
+    width: 300px;
+    /* ancho */
 }
 
 .contenedor-habilidades {
-    display: flex;              /* organiza a sus hijos usando Flexbox */
-    gap: 20px;                  /* espacio entre los hijos */
-    justify-content: center;    /* centra los hijos en el eje principal */
-    flex-wrap: wrap;            /* permite que bajen de fila si no caben */
+    display: flex;
+    /* organiza a sus hijos usando Flexbox */
+    gap: 20px;
+    /* espacio entre los hijos */
+    justify-content: center;
+    /* centra los hijos en el eje principal */
+    flex-wrap: wrap;
+    /* permite que bajen de fila si no caben */
 }
 
 section {
-    padding: 80px 40px; /* espacio interior: 80px arriba/abajo y 40px izquierda/derecha */
+    padding: 80px 40px;
+    /* espacio interior: 80px arriba/abajo y 40px izquierda/derecha */
 }
 
 nav {
+
     display: flex;
     gap: 30px;
     justify-content: center;
+
     padding: 20px 40px;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
     margin: 20px;
+
+    background-color: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+}
+
+header {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#inicio {
+    padding-top: 140px;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#inicio h1{
+    font-size: 70px;               /*tamaño de letra*/
+    margin: 0px;
+    margin-bottom: 15px;
+    font-weight: 700;          /*grosor de la letra*/
+    letter-spacing: -2px;
+
+}
+
+#inicio h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #a1a1aa;
+    margin: 0 0 20px 0;   /*al tener 4 valores significa que se modifican los 4 lados del contenedor en ese orden y en el sentido de las agujas del reloj*/
+}
+
+#inicio p {
+    max-width: 650px;
+    font-size: 18px;
+    line-height: 1.7; /*separacion entre lineas de arriba y abajo*/
+    color: #a1a1aa;
+}
+
+.contenedor-de-mis-datos-hero{
+    max-width: 1200px;
+    margin: 0 auto;             /**max-width limita cuánto puede crecer la caja. margin: 0 auto puede centrar horizontalmente esa caja repartiendo el espacio sobrante entre sus márgenes izquierdo y derecho./
 }
