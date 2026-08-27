@@ -1,5 +1,18 @@
 body {
-    background-color: black;
+    background:
+        radial-gradient(
+            ellipse at 105% 80%,
+            rgba(55, 70, 180, 0.14),
+            transparent 45%
+        ),
+        radial-gradient(
+            ellipse at -10% 0%,
+            rgba(80, 60, 200, 0.18),
+            transparent 55%
+        ),
+        #050505;
+
+    background-attachment: fixed;
     color: white;
     margin: 0;
     font-family: "Inter", sans-serif;
@@ -36,26 +49,22 @@ section {
 }
 
 nav {
-
     display: flex;
     gap: 30px;
     justify-content: center;
-
     padding: 20px 40px;
     margin: 20px;
-
     background-color: rgba(255, 255, 255, 0.05);
-
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 20px;
-
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
 
+    /* sombra del navbar completo */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
 }
 
 header {
-    
     position: fixed;
     top: 0;
     left: 0;
@@ -66,35 +75,101 @@ header {
 #inicio {
     padding-top: 140px;
     min-height: 100vh;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-#inicio h1{
-    font-size: 70px;               /*tamaño de letra*/
+
+#inicio h1 {
+    font-size: 70px;
+    /***tamaño de letra***/
     margin: 0px;
     margin-bottom: 15px;
-    font-weight: 700;          /*grosor de la letra*/
+    font-weight: 700;
+    /***grosor de la letra***/
     letter-spacing: -2px;
-
 }
 
 #inicio h2 {
     font-size: 24px;
     font-weight: 500;
     color: #a1a1aa;
-    margin: 0 0 20px 0;   /*al tener 4 valores significa que se modifican los 4 lados del contenedor en ese orden y en el sentido de las agujas del reloj*/
+    margin: 0 0 20px 0;
+    /***al tener 4 valores significa que se modifican los 4 lados del contenedor en ese orden y en el sentido de las agujas del reloj***/
 }
 
 #inicio p {
     max-width: 650px;
     font-size: 18px;
-    line-height: 1.7; /*separacion entre lineas de arriba y abajo*/
+    line-height: 1.7;
+    /***separacion entre lineas de arriba y abajo***/
     color: #a1a1aa;
 }
 
-.contenedor-de-mis-datos-hero{
+.contenedor-de-mis-datos-hero {
     max-width: 1200px;
-    margin: 0 auto;             /**max-width limita cuánto puede crecer la caja. margin: 0 auto puede centrar horizontalmente esa caja repartiendo el espacio sobrante entre sus márgenes izquierdo y derecho./
+    margin: 0 auto;
+    /**max-width limita cuánto puede crecer la caja. margin: 0 auto puede centrar horizontalmente esa caja repartiendo el espacio sobrante entre sus márgenes izquierdo y derecho.*/
+}
+
+nav a {
+    font-size: 15px;
+    color: #b8b8b8;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    /*hover significa: aplica este estilo mientras el cursor esté encima del elemento.*/
+    color: white;
+}
+
+.botones-hero {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.botones-hero a {
+    padding: 12px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    border-radius: 10px;
+}
+
+.boton-principal {
+    background-color: white;
+    color: #050505;
+    transition: background-color 0.3s ease;
+}
+
+.boton-principal:hover {
+    background-color: #d4d4d4;
+}
+
+.boton-secundario {
+    color: white;
+
+    /* hace suave el cambio de background-color */
+    transition: background-color 0.3s ease;
+}
+
+.boton-secundario:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.contenedor-sobre-mi {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contenedor-sobre-mi h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 25px 0;
+}
+
+.contenedor-sobre-mi p {
+    font-size: 18px;
+    color: #a1a1aa;
+    line-height: 1.7;
+    margin: 0;
 }
