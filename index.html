@@ -3,54 +3,176 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Portafolio | Cristian Hernández</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Cristian Hernández | Portfolio</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <!-------------------------------fuentes-->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-------------------------------iconos-->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-------------------------------hoja de estilos-->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
+
 
 <body>
 
-    <!-------------------------------- Inicio del header -->
-    <header>
-        <nav>
-            <div class="iniciales-navbar">
-                <a href="#inicio">CL.</a>
-            </div>
-            <div class="enlaces-navbar">
-                <a href="#inicio">Inicio</a>
-                <a href="#sobre-mi">Sobre mí</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#habilidades">Habilidades</a>
-                <a class="boton-navbar" href="#contacto">Contacto</a>
-            </div>
-        </nav>
 
+    <!-------------------------------navbar-->
+
+    <header>
+
+        <nav>
+
+
+            <!-------------------------------iniciales navbar-->
+
+            <div class="iniciales-navbar">
+
+                <a href="#inicio">
+                    CL.
+                </a>
+
+            </div>
+
+
+            <!-------------------------------enlaces navbar-->
+
+            <div class="enlaces-navbar">
+
+                <a href="#inicio">
+                    Inicio
+                </a>
+
+                <a href="#sobre-mi">
+                    Sobre mí
+                </a>
+
+                <a href="#proyectos">
+                    Proyectos
+                </a>
+
+                <a href="#habilidades">
+                    Habilidades
+                </a>
+
+                <a href="#experiencia">
+                    Experiencia
+                </a>
+
+                <a
+                    class="boton-navbar"
+                    href="#contacto"
+                >
+                    Contacto
+                </a>
+
+            </div>
+
+        </nav>
 
     </header>
 
 
-    <!----------------------------------- Inicio del main -->
+
+    <!-------------------------------contenido principal-->
+
     <main>
 
 
-        <!----------------------------------- Inicio -->
-        <section id="inicio"> <!-- section es para dividir secciones -->
+        <!-------------------------------inicio-->
+
+        <section id="inicio">
 
             <div class="contenedor-de-mis-datos-hero">
+
+
+                <!-------------------------------informacion hero-->
+
                 <div class="contenido-hero">
-                    <h1>Cristian Hernández</h1>
 
-                    <h2>Java Full Stack Developer</h2>
 
-                    <p>
+                    <!-------------------------------estado disponibilidad-->
+
+                    <div class="estado-disponibilidad">
+
+                        <span></span>
+
+                        <p>
+                            Disponible para nuevas oportunidades
+                        </p>
+
+                    </div>
+
+
+                    <!-------------------------------etiqueta portafolio-->
+
+                    <p class="etiqueta-portafolio">
+                        PORTAFOLIO / 2026
+                    </p>
+
+
+                    <!-------------------------------nombre principal-->
+
+                    <h1>
+
+                        <span class="nombre-principal">
+                            Cristian
+                        </span>
+
+                        <span class="apellido-principal">
+                            Hernández
+                        </span>
+
+                    </h1>
+
+
+                    <!-------------------------------puesto profesional-->
+
+                    <h2>
+                        Java Full Stack Developer
+                    </h2>
+
+
+                    <!-------------------------------descripcion hero-->
+
+                    <p class="descripcion-hero">
                         Desarrollo soluciones web combinando programación,
                         diseño de interfaces y pensamiento estructurado
                         para crear experiencias digitales funcionales,
@@ -58,108 +180,473 @@
                     </p>
 
 
+                    <!-------------------------------botones hero-->
+
                     <div class="botones-hero">
 
-                        <a class="boton-principal" href="#proyectos">
-                            Proyectos
+                        <a
+                            class="boton-principal"
+                            href="#proyectos"
+                        >
+                            Ver proyectos
+
+                            <i class="fa-solid fa-arrow-down"></i>
                         </a>
 
-                        <a class="boton-secundario" href="#contacto">
-                            Contacto
+
+                        <a
+                            class="boton-secundario"
+                            href="https://wa.me/527791018892"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <i class="fa-brands fa-whatsapp"></i>
+
+                            +52 779 101 88 92
                         </a>
 
                     </div>
+
+
+                    <!-------------------------------redes hero-->
+
+                    <div class="redes-hero">
+
+                        <a
+                            href="https://www.linkedin.com/in/cristianhern%C3%A1ndezluna/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
+                        >
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+
+
+                        <a
+                            href="https://github.com/Cristian-Luna01"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub"
+                        >
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+
+                        <a
+                            href="mailto:cristianlunahernandez7@gmail.com"
+                            aria-label="Correo electrónico"
+                        >
+                            <i class="fa-regular fa-envelope"></i>
+                        </a>
+
+                    </div>
+
                 </div>
+
+
+
+                <!-------------------------------tarjeta perfil-->
+
                 <div class="tarjeta-hero">
 
+
+                    <!-------------------------------foto perfil-->
+
                     <div class="contenedor-foto-perfil">
-                        <img src="/sources/Foto de perfil.jpg" alt="Foto de perfil">
+
+                        <img
+                            src="/sources/Foto de perfil.jpg"
+                            alt="Foto de perfil de Cristian Hernández"
+                        >
+
                     </div>
 
+
+                    <!-------------------------------datos perfil-->
+
                     <div class="datos-perfil">
-                        <h3>Cristian Hernandez Luna</h3>
-                        <p>Java Full Stack Developer</p>
+
+
+                        <!-------------------------------ubicacion-->
+
+                        <div class="dato-perfil">
+
+                            <span>
+                                Ubicación
+                            </span>
+
+                            <p>
+                                México
+                            </p>
+
+                        </div>
+
+
+                        <!-------------------------------especialidad-->
+
+                        <div class="dato-perfil">
+
+                            <span>
+                                Especialidad
+                            </span>
+
+                            <p>
+                                Desarrollo Full Stack
+                            </p>
+
+                        </div>
+
+
+                        <!-------------------------------enfoque-->
+
+                        <div class="dato-perfil">
+
+                            <span>
+                                Enfoque
+                            </span>
+
+                            <p>
+                                Web Development
+                            </p>
+
+                        </div>
+
+
                     </div>
 
                 </div>
+
 
             </div>
 
         </section>
 
 
-        <!----------------------------------- Sobre mí -->
+
+        <!-------------------------------sobre mi-->
+
         <section id="sobre-mi">
 
             <div class="contenedor-sobre-mi">
 
-                <h2>Sobre mí</h2>
 
-                <p>
-                    Me interesa crear productos digitales donde la tecnología,
-                    la estructura y el diseño trabajen juntos.
-                </p>
+                <!-------------------------------titulo sobre mi-->
 
-                <p>
-                    Actualmente desarrollo proyectos con tecnologías como HTML,
-                    CSS, JavaScript y Java, mientras continúo fortaleciendo mis
-                    conocimientos en desarrollo Full Stack y buenas prácticas
-                    de programación.
-                </p>
+                <h2>
+                    Sobre mí
+                </h2>
+
+
+                <!-------------------------------contenido sobre mi-->
+
+                <div class="contenido-sobre-mi">
+
+
+                    <!-------------------------------tarjeta sobre mi-->
+
+                    <div class="tarjeta-sobre-mi">
+
+                        <p class="texto-destacado-sobre-mi">
+                            Me interesa crear productos digitales donde
+                            tecnología, estructura y diseño trabajen juntos.
+                        </p>
+
+
+                        <p>
+                            Soy desarrollador Java Full Stack Jr. y he participado
+                            en el diseño, desarrollo e integración de soluciones
+                            utilizando Java, JavaScript, HTML, CSS, SQL y tecnologías
+                            relacionadas con el desarrollo Full Stack.
+                        </p>
+
+
+                        <p>
+                            Mi experiencia previa en el sector operativo me permitió
+                            desarrollar liderazgo, disciplina, atención al detalle,
+                            gestión de procesos y capacidad para resolver problemas.
+                        </p>
+
+
+                        <p>
+                            Actualmente continúo fortaleciendo mis conocimientos
+                            mediante proyectos prácticos, trabajo colaborativo
+                            y aprendizaje constante.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-------------------------------estadisticas sobre mi-->
+
+                    <div class="estadisticas-sobre-mi">
+
+
+                        <!-------------------------------proyectos principales-->
+
+                        <div class="estadistica">
+
+                            <strong>
+                                02+
+                            </strong>
+
+                            <span>
+                                Proyectos principales
+                            </span>
+
+                        </div>
+
+
+                        <!-------------------------------tecnologias-->
+
+                        <div class="estadistica">
+
+                            <strong>
+                                08+
+                            </strong>
+
+                            <span>
+                                Tecnologías
+                            </span>
+
+                        </div>
+
+
+                        <!-------------------------------aprendizaje continuo-->
+
+                        <div class="estadistica">
+
+                            <strong>
+                                100%
+                            </strong>
+
+                            <span>
+                                Aprendizaje continuo
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
 
             </div>
 
         </section>
 
 
-        <!----------------------------------- Proyectos -->
+
+        <!-------------------------------proyectos-->
+
         <section id="proyectos">
 
             <div class="contenedor-proyectos">
 
-                <h2>Proyectos</h2>
 
+                <!-------------------------------titulo proyectos-->
+
+                <h2>
+                    Proyectos seleccionados
+                </h2>
+
+
+                <p class="descripcion-seccion">
+                    Una selección de proyectos académicos y colaborativos.
+                </p>
+
+
+
+                <!-------------------------------contenedor proyectos-->
 
                 <div class="contenedor-proyectos-articulos">
 
 
-                    <!--------------- Proyecto Zona Huella -->
-                    <article>
+                    <!-------------------------------zona huella-->
 
-                        <h3>Zona Huella</h3>
+                    <article class="proyecto">
 
-                        <p>
-                            E-commerce enfocado en productos para perros y gatos,
-                            desarrollado como proyecto colaborativo.
-                        </p>
 
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <li>Bootstrap</li>
-                        </ul>
+                        <!-------------------------------imagen zona huella-->
+
+                        <div class="imagen-proyecto">
+
+                            <span>
+                                ZONA HUELLA
+                            </span>
+
+                        </div>
+
+
+                        <!-------------------------------contenido zona huella-->
+
+                        <div class="contenido-proyecto">
+
+
+                            <div class="encabezado-proyecto">
+
+                                <p class="tipo-proyecto">
+                                    E-COMMERCE
+                                </p>
+
+
+                                <div class="links-proyecto">
+
+                                    <a
+                                        href="https://github.com/PaulBV-09/Zona-Huella-"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Repositorio de Zona Huella"
+                                    >
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                            <h3>
+                                Zona Huella
+                            </h3>
+
+
+                            <p>
+                                Plataforma de comercio electrónico enfocada
+                                en productos para perros y gatos, incluyendo
+                                alimento, accesorios, juguetes y productos
+                                de cuidado.
+                            </p>
+
+
+                            <!-------------------------------participacion zona huella-->
+
+                            <div class="participacion-proyecto">
+
+                                <strong>
+                                    Mi participación
+                                </strong>
+
+                                <p>
+                                    Desarrollo y colaboración en componentes
+                                    de interfaz, estructura del sitio,
+                                    funcionalidades con JavaScript,
+                                    organización de información con SQL
+                                    e integración del trabajo en equipo.
+                                </p>
+
+                            </div>
+
+
+                            <!-------------------------------tecnologias zona huella-->
+
+                            <ul class="tecnologias-proyecto">
+
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>Bootstrap</li>
+                                <li>SQL</li>
+
+                            </ul>
+
+
+                        </div>
 
                     </article>
 
 
-                    <!--------------- Proyecto DICFA Sport -->
-                    <article>
 
-                        <h3>DICFA Sport</h3>
+                    <!-------------------------------dicfa sport-->
 
-                        <p>
-                            E-commerce deportivo desarrollado de forma colaborativa,
-                            con participación en la creación del Hero y apoyo en
-                            decisiones de diseño visual y selección de colores.
-                        </p>
+                    <article class="proyecto">
 
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <li>Bootstrap</li>
-                        </ul>
+
+                        <!-------------------------------imagen dicfa sport-->
+
+                        <div class="imagen-proyecto">
+
+                            <span>
+                                DICFA SPORT
+                            </span>
+
+                        </div>
+
+
+                        <!-------------------------------contenido dicfa sport-->
+
+                        <div class="contenido-proyecto">
+
+
+                            <div class="encabezado-proyecto">
+
+                                <p class="tipo-proyecto">
+                                    HACKATHON
+                                </p>
+
+
+                                <div class="links-proyecto">
+
+                                    <a
+                                        href="https://github.com/adiumx/hackaton1"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Repositorio de DICFA Sport"
+                                    >
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                            <h3>
+                                DICFA Sport
+                            </h3>
+
+
+                            <p>
+                                Tienda deportiva desarrollada de forma
+                                colaborativa durante un Hackathon,
+                                con catálogo de productos y navegación
+                                por categorías.
+                            </p>
+
+
+                            <!-------------------------------participacion dicfa sport-->
+
+                            <div class="participacion-proyecto">
+
+                                <strong>
+                                    Mi participación
+                                </strong>
+
+                                <p>
+                                    Desarrollo de la sección Hero utilizando
+                                    HTML, CSS y Bootstrap, además de colaboración
+                                    en decisiones visuales, composición y
+                                    selección de colores.
+                                </p>
+
+                            </div>
+
+
+                            <!-------------------------------tecnologias dicfa sport-->
+
+                            <ul class="tecnologias-proyecto">
+
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>Bootstrap</li>
+                                <li>Git</li>
+
+                            </ul>
+
+
+                        </div>
 
                     </article>
 
@@ -171,18 +658,37 @@
         </section>
 
 
-        <!----------------------------------- Habilidades -->
-        <section id="habilidades">
-            <div class="contenedor-seccion-habilidades">
-                <h2>Habilidades</h2>
 
+        <!-------------------------------habilidades-->
+
+        <section id="habilidades">
+
+            <div class="contenedor-seccion-habilidades">
+
+
+                <!-------------------------------titulo habilidades-->
+
+                <h2>
+                    Habilidades
+                </h2>
+
+
+                <!-------------------------------contenedor habilidades-->
 
                 <div class="contenedor-habilidades">
 
 
+                    <!-------------------------------frontend-->
+
                     <div class="tarjeta-habilidad">
 
-                        <h3>Frontend</h3>
+                        <div class="icono-habilidad">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+
+                        <h3>
+                            Frontend
+                        </h3>
 
                         <ul>
                             <li>HTML</li>
@@ -194,21 +700,64 @@
                     </div>
 
 
+
+                    <!-------------------------------backend-->
+
                     <div class="tarjeta-habilidad">
 
-                        <h3>Backend</h3>
+                        <div class="icono-habilidad">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+
+                        <h3>
+                            Backend
+                        </h3>
 
                         <ul>
                             <li>Java</li>
                             <li>Python</li>
+                            <li>Spring Boot</li>
+                            <li>POO</li>
                         </ul>
 
                     </div>
 
 
+
+                    <!-------------------------------datos-->
+
                     <div class="tarjeta-habilidad">
 
-                        <h3>Herramientas</h3>
+                        <div class="icono-habilidad">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+
+                        <h3>
+                            Datos
+                        </h3>
+
+                        <ul>
+                            <li>SQL</li>
+                            <li>MySQL</li>
+                            <li>Bases de datos relacionales</li>
+                            <li>Gestión de información</li>
+                        </ul>
+
+                    </div>
+
+
+
+                    <!-------------------------------herramientas-->
+
+                    <div class="tarjeta-habilidad">
+
+                        <div class="icono-habilidad">
+                            <i class="fa-brands fa-git-alt"></i>
+                        </div>
+
+                        <h3>
+                            Herramientas
+                        </h3>
 
                         <ul>
                             <li>Git</li>
@@ -221,59 +770,280 @@
 
 
                 </div>
+
             </div>
+
         </section>
 
 
-        <!----------------------------------- Contacto -->
-        <section id="contacto">
-            <div class="contenedor-contacto">
-                <h2>¿Construimos algo juntos?</h2>
 
-                <p>
-                    Estoy interesado en oportunidades donde pueda seguir creciendo
-                    como desarrollador y colaborar en proyectos tecnológicos.
-                </p>
+        <!-------------------------------experiencia-->
+
+        <section id="experiencia">
+
+            <div class="contenedor-experiencia">
 
 
-                <div>
+                <!-------------------------------titulo experiencia-->
 
-                    <a class="boton-contacto-gmail" href="mailto:cristianlunahernandez7@gmail.com">
-                        Escríbeme
-                    </a>
+                <h2>
+                    Experiencia y formación
+                </h2>
+
+
+
+                <!-------------------------------linea de tiempo-->
+
+                <div class="linea-tiempo">
+
+
+                    <!-------------------------------generation mexico-->
+
+                    <div class="elemento-linea-tiempo">
+
+                        <div class="punto-linea"></div>
+
+
+                        <div class="tarjeta-experiencia">
+
+                            <span>
+                                2026
+                            </span>
+
+                            <h3>
+                                Java Full Stack Developer
+                            </h3>
+
+                            <h4>
+                                Generation México
+                            </h4>
+
+                            <p>
+                                Formación intensiva enfocada en programación,
+                                desarrollo web, Java, JavaScript, HTML, CSS,
+                                SQL, Git y metodologías ágiles.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-------------------------------universidad cnci-->
+
+                    <div class="elemento-linea-tiempo">
+
+                        <div class="punto-linea"></div>
+
+
+                        <div class="tarjeta-experiencia">
+
+                            <span>
+                                2023 - 2026
+                            </span>
+
+                            <h3>
+                                Ingeniería en Tecnologías Computacionales
+                            </h3>
+
+                            <h4>
+                                Universidad CNCI
+                            </h4>
+
+                            <p>
+                                Formación universitaria enfocada en tecnologías
+                                computacionales. Actualmente con título en proceso.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-------------------------------experiencia laboral-->
+
+                    <div class="elemento-linea-tiempo">
+
+                        <div class="punto-linea"></div>
+
+
+                        <div class="tarjeta-experiencia">
+
+                            <span>
+                                2021 - 2026
+                            </span>
+
+                            <h3>
+                                Técnico en Seguridad
+                            </h3>
+
+                            <h4>
+                                Prometheus
+                            </h4>
+
+                            <p>
+                                Experiencia coordinando personal, supervisando
+                                procesos operativos, gestionando información
+                                y resolviendo situaciones dentro de entornos
+                                de alta responsabilidad.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
 
                 </div>
 
 
-                <div class="botones-redes-laborales">
+
+                <!-------------------------------descargar cv-->
+
+                <a
+                    class="boton-cv"
+                    href="sources/Cv Cristian Hernández Luna.pdf"
+                    download
+                >
+                    <i class="fa-regular fa-file-pdf"></i>
+
+                    Descargar CV
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-------------------------------contacto-->
+
+        <section id="contacto">
+
+            <div class="tarjeta-contacto">
+
+
+                <!-------------------------------parte superior contacto-->
+
+                <div class="parte-superior-contacto">
+
+
+                    <!-------------------------------texto contacto-->
+
+                    <div class="texto-contacto">
+
+                        <h2>
+                            ¿Construimos algo juntos?
+                        </h2>
+
+
+                        <p>
+                            Estoy interesado en oportunidades donde pueda seguir
+                            creciendo como desarrollador y colaborar en proyectos
+                            tecnológicos.
+                        </p>
+
+                    </div>
+
+
+                    <!-------------------------------boton escribirme-->
+
+                    <a
+                        class="boton-escribirme"
+                        href="mailto:cristianlunahernandez7@gmail.com"
+                    >
+                        Escribirme
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+
+                </div>
+
+
+                <!-------------------------------linea contacto-->
+
+                <div class="linea-contacto"></div>
+
+
+                <!-------------------------------links contacto-->
+
+                <div class="links-contacto">
+
 
                     <a href="mailto:cristianlunahernandez7@gmail.com">
-                        Correo
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        cristianlunahernandez7@gmail.com
+
                     </a>
 
-                    <a href="https://www.linkedin.com/in/cristianhern%C3%A1ndezluna/">
+
+                    <a
+                        href="https://www.linkedin.com/in/cristianhern%C3%A1ndezluna/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <i class="fa-brands fa-linkedin"></i>
+
                         LinkedIn
+
                     </a>
 
-                    <a href="https://github.com/Cristian-Luna01">
+
+                    <a
+                        href="https://github.com/Cristian-Luna01"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <i class="fa-brands fa-github"></i>
+
                         GitHub
+
                     </a>
+
 
                 </div>
+
+
             </div>
+
         </section>
 
 
     </main>
 
 
-    <!-------------------------------------- Inicio del footer -->
+
+    <!-------------------------------footer-->
+
     <footer>
+
         <div class="contenedor-footer">
-            <p>© 2026 Cristian Hernández</p>
-            <p>Portafolio personal</p>
+
+            <p>
+                © 2026 Cristian Hernández
+            </p>
+
+
+            <a href="#inicio">
+                Volver arriba
+
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+
         </div>
+
     </footer>
+
 
 </body>
 
