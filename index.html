@@ -11,10 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -23,14 +20,19 @@
 
     <!-------------------------------- Inicio del header -->
     <header>
-
         <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#sobre-mi">Sobre mí</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#habilidades">Habilidades</a>
-            <a href="#contacto">Contacto</a>
+            <div class="iniciales-navbar">
+                <a href="#inicio">CL.</a>
+            </div>
+            <div class="enlaces-navbar">
+                <a href="#inicio">Inicio</a>
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#habilidades">Habilidades</a>
+                <a class="boton-navbar" href="#contacto">Contacto</a>
+            </div>
         </nav>
+
 
     </header>
 
@@ -43,34 +45,41 @@
         <section id="inicio"> <!-- section es para dividir secciones -->
 
             <div class="contenedor-de-mis-datos-hero">
+                <div class="contenido-hero">
+                    <h1>Cristian Hernández</h1>
 
-                <h1>Cristian Hernández</h1>
+                    <h2>Java Full Stack Developer</h2>
 
-                <h2>Java Full Stack Developer</h2>
-
-                <p>
-                    Desarrollo soluciones web combinando programación,
-                    diseño de interfaces y pensamiento estructurado
-                    para crear experiencias digitales funcionales,
-                    claras y centradas en el usuario.
-                </p>
+                    <p>
+                        Desarrollo soluciones web combinando programación,
+                        diseño de interfaces y pensamiento estructurado
+                        para crear experiencias digitales funcionales,
+                        claras y centradas en el usuario.
+                    </p>
 
 
-                <div class="botones-hero">
+                    <div class="botones-hero">
 
-                    <a
-                        class="boton-principal"
-                        href="#proyectos"
-                    >
-                        Proyectos
-                    </a>
+                        <a class="boton-principal" href="#proyectos">
+                            Proyectos
+                        </a>
 
-                    <a
-                        class="boton-secundario"
-                        href="#contacto"
-                    >
-                        Contacto
-                    </a>
+                        <a class="boton-secundario" href="#contacto">
+                            Contacto
+                        </a>
+
+                    </div>
+                </div>
+                <div class="tarjeta-hero">
+
+                    <div class="contenedor-foto-perfil">
+                        <img src="/sources/Foto de perfil.jpg" alt="Foto de perfil">
+                    </div>
+
+                    <div class="datos-perfil">
+                        <h3>Cristian Hernandez Luna</h3>
+                        <p>Java Full Stack Developer</p>
+                    </div>
 
                 </div>
 
@@ -164,94 +173,94 @@
 
         <!----------------------------------- Habilidades -->
         <section id="habilidades">
-
-            <h2>Habilidades</h2>
-
-
-            <div class="contenedor-habilidades">
+            <div class="contenedor-seccion-habilidades">
+                <h2>Habilidades</h2>
 
 
-                <div class="tarjeta-habilidad">
+                <div class="contenedor-habilidades">
 
-                    <h3>Frontend</h3>
 
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>Bootstrap</li>
-                    </ul>
+                    <div class="tarjeta-habilidad">
+
+                        <h3>Frontend</h3>
+
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Bootstrap</li>
+                        </ul>
+
+                    </div>
+
+
+                    <div class="tarjeta-habilidad">
+
+                        <h3>Backend</h3>
+
+                        <ul>
+                            <li>Java</li>
+                            <li>Python</li>
+                        </ul>
+
+                    </div>
+
+
+                    <div class="tarjeta-habilidad">
+
+                        <h3>Herramientas</h3>
+
+                        <ul>
+                            <li>Git</li>
+                            <li>GitHub</li>
+                            <li>VS Code</li>
+                            <li>Scrum</li>
+                        </ul>
+
+                    </div>
+
 
                 </div>
-
-
-                <div class="tarjeta-habilidad">
-
-                    <h3>Backend</h3>
-
-                    <ul>
-                        <li>Java</li>
-                        <li>Python</li>
-                    </ul>
-
-                </div>
-
-
-                <div class="tarjeta-habilidad">
-
-                    <h3>Herramientas</h3>
-
-                    <ul>
-                        <li>Git</li>
-                        <li>GitHub</li>
-                        <li>VS Code</li>
-                        <li>Scrum</li>
-                    </ul>
-
-                </div>
-
-
             </div>
-
         </section>
 
 
         <!----------------------------------- Contacto -->
         <section id="contacto">
+            <div class="contenedor-contacto">
+                <h2>¿Construimos algo juntos?</h2>
 
-            <h2>¿Construimos algo juntos?</h2>
-
-            <p>
-                Estoy interesado en oportunidades donde pueda seguir creciendo
-                como desarrollador y colaborar en proyectos tecnológicos.
-            </p>
+                <p>
+                    Estoy interesado en oportunidades donde pueda seguir creciendo
+                    como desarrollador y colaborar en proyectos tecnológicos.
+                </p>
 
 
-            <div>
+                <div>
 
-                <a href="mailto:cristianlunahernandez7@gmail.com">
-                    Escríbeme
-                </a>
+                    <a class="boton-contacto-gmail" href="mailto:cristianlunahernandez7@gmail.com">
+                        Escríbeme
+                    </a>
 
+                </div>
+
+
+                <div class="botones-redes-laborales">
+
+                    <a href="mailto:cristianlunahernandez7@gmail.com">
+                        Correo
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/cristianhern%C3%A1ndezluna/">
+                        LinkedIn
+                    </a>
+
+                    <a href="https://github.com/Cristian-Luna01">
+                        GitHub
+                    </a>
+
+                </div>
             </div>
-
-
-            <div>
-
-                <a href="mailto:cristianlunahernandez7@gmail.com">
-                    Correo
-                </a>
-
-                <a href="https://www.linkedin.com/in/cristianhern%C3%A1ndezluna/">
-                    LinkedIn
-                </a>
-
-                <a href="https://github.com/Cristian-Luna01">
-                    GitHub
-                </a>
-
-            </div>
-
         </section>
 
 
@@ -260,10 +269,10 @@
 
     <!-------------------------------------- Inicio del footer -->
     <footer>
-
-        <p>© 2026 Cristian Hernández</p>
-        <p>Portafolio personal</p>
-
+        <div class="contenedor-footer">
+            <p>© 2026 Cristian Hernández</p>
+            <p>Portafolio personal</p>
+        </div>
     </footer>
 
 </body>
