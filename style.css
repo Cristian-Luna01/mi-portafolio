@@ -10,16 +10,12 @@ html {
 
 body {
     background:
-        radial-gradient(
-            ellipse at 105% 80%,
+        radial-gradient(ellipse at 105% 80%,
             rgba(55, 70, 180, 0.14),
-            transparent 45%
-        ),
-        radial-gradient(
-            ellipse at -10% 0%,
+            transparent 45%),
+        radial-gradient(ellipse at -10% 0%,
             rgba(80, 60, 200, 0.18),
-            transparent 55%
-        ),
+            transparent 55%),
         #050505;
 
     background-attachment: fixed;
@@ -39,8 +35,29 @@ a {
 
 section {
     padding: 100px 40px;
+}
 
-    scroll-margin-top: 100px;
+
+/*-------------------------------posicion scroll secciones*/
+
+#sobre-mi {
+    scroll-margin-top: 90px;
+}
+
+#proyectos {
+    scroll-margin-top: 1px;
+}
+
+#habilidades {
+    scroll-margin-top: 185px;
+}
+
+#experiencia {
+    scroll-margin-top: 1px;
+}
+
+#contacto {
+    scroll-margin-top: 90px;
 }
 
 
@@ -71,15 +88,13 @@ header::before {
     width: 100%;
     height: 24px;
 
-    background: linear-gradient(
-        to right,
-        transparent 0%,
-        rgba(5, 5, 5, 0.75) 4%,
-        #050505 12%,
-        #050505 88%,
-        rgba(5, 5, 5, 0.75) 96%,
-        transparent 100%
-    );
+    background: linear-gradient(to right,
+            transparent 0%,
+            rgba(5, 5, 5, 0.75) 4%,
+            #050505 12%,
+            #050505 88%,
+            rgba(5, 5, 5, 0.75) 96%,
+            transparent 100%);
 }
 
 
@@ -138,7 +153,7 @@ nav {
 nav a {
     font-size: 15px;
 
-    color: #b8b8b8;
+    color: #fdfdfd;
 
     transition: color 0.3s ease;
 }
@@ -638,7 +653,7 @@ nav a:hover {
 
 /*-------------------------------titulo proyectos*/
 
-.contenedor-proyectos > h2 {
+.contenedor-proyectos>h2 {
     margin: 0 0 12px 0;
 
     font-size: 58px;
@@ -696,31 +711,31 @@ nav a:hover {
 .imagen-proyecto {
     height: 285px;
 
-    padding: 25px;
-
-    display: flex;
-
-    align-items: flex-end;
-
-    background:
-        radial-gradient(
-            circle at 70% 25%,
-            rgba(255, 255, 255, 0.12),
-            transparent 35%
-        ),
-        linear-gradient(
-            145deg,
-            #292929,
-            #080808
-        );
+    overflow: hidden;
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
 
-.imagen-proyecto span {
-    font-size: 28px;
+.imagen-proyecto a {
+    width: 100%;
+    height: 100%;
 
-    font-weight: 700;
+    display: block;
+}
+
+.imagen-proyecto img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.imagen-proyecto:hover img {
+    transform: scale(1.03);
 }
 
 
@@ -792,7 +807,7 @@ nav a:hover {
     font-weight: 500;
 }
 
-.proyecto > .contenido-proyecto > p {
+.proyecto>.contenido-proyecto>p {
     margin: 0;
 
     min-height: 56px;
@@ -871,6 +886,8 @@ nav a:hover {
     max-width: 1200px;
 
     margin: 0 auto;
+
+    margin-bottom: 50px;
 }
 
 
@@ -986,7 +1003,7 @@ nav a:hover {
 
 /*-------------------------------titulo experiencia*/
 
-.contenedor-experiencia > h2 {
+.contenedor-experiencia>h2 {
     margin: 0 0 55px 0;
 
     font-size: 58px;
@@ -1047,7 +1064,7 @@ nav a:hover {
     background-color: rgba(255, 255, 255, 0.04);
 }
 
-.tarjeta-experiencia > span {
+.tarjeta-experiencia>span {
     font-size: 10px;
 
     letter-spacing: 4px;
@@ -1324,6 +1341,4 @@ footer {
 
 /*-------------------------------responsive*/
 
-@media (max-width: 768px) {
-
-}
+@media (max-width: 768px) {}
