@@ -3,59 +3,43 @@
 <html lang="es">
 
 <head>
-
+    <!-- Configuro los metadatos básicos de mi página -->
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Cristian Hernández | Portfolio</title>
+    <title>Cristian Luna | Portafolio</title>
 
+    <!-- Enlazo el icono que se mostrará en la pestaña del navegador -->
+    <link rel="icon" type="image/png" href="sources/favicon.png">
 
-    <!-------------------------------fuentes-->
-
+    <!-- Conecto las fuentes de Google Fonts que elegí para el diseño -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-
-    <!-------------------------------iconos-->
-
+    <!-- Importo la librería de iconos para mis botones y redes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-
-    <!-------------------------------hoja de estilos-->
-
+    <!-- Vinculo mi hoja de estilos principal -->
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
-
-    <!-------------------------------navbar-->
-
+    <!-- Creo el encabezado con mi barra de navegación -->
     <header>
-
         <nav>
 
-
-            <!-------------------------------iniciales navbar-->
-
+            <!-- Coloco mis iniciales como logo que llevan al inicio -->
             <div class="iniciales-navbar">
-
                 <a href="#inicio">
                     CL.
                 </a>
-
             </div>
 
-
-            <!-------------------------------enlaces navbar-->
-
-            <div class="enlaces-navbar">
+            <!-- Agrupo los enlaces a las diferentes secciones de mi página -->
+            <!-- Mantengo el ID para controlarlo fácil con mi JavaScript -->
+            <div class="enlaces-navbar" id="menu-carrusel">
 
                 <a href="#inicio">
                     Inicio
@@ -84,50 +68,48 @@
             </div>
 
         </nav>
-
     </header>
 
 
-
-    <!-------------------------------contenido principal-->
-
+    <!-- Abro el contenedor principal donde irá todo mi contenido -->
     <main>
 
 
-        <!-------------------------------inicio-->
-
+        <!-- Defino la sección principal con la que abro el portafolio -->
         <section id="inicio">
 
             <div class="contenedor-de-mis-datos-hero">
 
 
-                <!-------------------------------informacion hero-->
-
+                <!-- Guardo la información de mis textos principales -->
                 <div class="contenido-hero">
 
 
-                    <!-------------------------------estado disponibilidad-->
+                    <!-- Agrupo mi estado de disponibilidad y la etiqueta superior -->
+                    <div class="cabecera-hero">
 
-                    <div class="estado-disponibilidad">
 
-                        <span></span>
+                        <!-- Indicador de que busco trabajo -->
+                        <div class="estado-disponibilidad">
 
-                        <p>
-                            Disponible para nuevas oportunidades
+                            <span></span>
+
+                            <p>
+                                Disponible para nuevas oportunidades
+                            </p>
+
+                        </div>
+
+
+                        <!-- Etiqueta decorativa del año -->
+                        <p class="etiqueta-portafolio">
+                            PORTAFOLIO / 2026
                         </p>
 
                     </div>
 
 
-                    <!-------------------------------etiqueta portafolio-->
-
-                    <p class="etiqueta-portafolio">
-                        PORTAFOLIO / 2026
-                    </p>
-
-
-                    <!-------------------------------nombre principal-->
-
+                    <!-- Pongo mi nombre como el título principal de la página -->
                     <h1>
 
                         <span class="nombre-principal">
@@ -135,97 +117,109 @@
                         </span>
 
                         <span class="apellido-principal">
-                            Hernández
+                            Luna
                         </span>
 
                     </h1>
 
 
-                    <!-------------------------------puesto profesional-->
-
+                    <!-- Declaro mi puesto ajustado a mi realidad y enfoque actual -->
                     <h2>
-                        Java Full Stack Developer
+                        Desarrollador Web Jr | Enfoque Frontend
                     </h2>
 
 
-                    <!-------------------------------descripcion hero-->
-
+                    <!-- Escribo una pequeña introducción sobre mis habilidades -->
                     <p class="descripcion-hero">
-                        Desarrollo soluciones web combinando programación,
-                        diseño de interfaces y pensamiento estructurado
-                        para crear experiencias digitales funcionales,
-                        claras y centradas en el usuario.
+                        Me apasiona darle estructura y estilo a las interfaces. Aunque cuento con nociones básicas de
+                        Backend, practico constantemente tecnologías como SQL, Java y Spring Boot para consolidar un
+                        perfil Full Stack. Mi fortaleza actual está en crear experiencias visuales claras, funcionales
+                        y centradas en el usuario.
                     </p>
 
 
-                    <!-------------------------------botones hero-->
-
+                    <!-- Coloco los botones de llamada a la acción principales -->
                     <div class="botones-hero">
 
                         <a class="boton-principal" href="#proyectos">
                             Ver proyectos
-
                             <i class="fa-solid fa-arrow-down"></i>
                         </a>
 
-
-                        <a class="boton-secundario" href="https://wa.me/527791018892" target="_blank"
+                        <a class="boton-secundario"
+                            href="https://wa.me/527791018892"
+                            target="_blank"
                             rel="noopener noreferrer">
+
                             <i class="fa-brands fa-whatsapp"></i>
 
-                            +52 779 101 88 92
+                            <span class="whatsapp-escritorio">
+                                +52 779 101 88 92
+                            </span>
+
+                            <span class="whatsapp-movil">
+                                WhatsApp
+                            </span>
+
                         </a>
 
                     </div>
 
 
-                    <!-------------------------------redes hero-->
-
+                    <!-- Acomodo los iconos con enlaces a mis redes profesionales -->
                     <div class="redes-hero">
 
-                        <a href="https://www.linkedin.com/in/cristianhern%C3%A1ndezluna/" target="_blank"
-                            rel="noopener noreferrer" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/cristianhern%C3%A1ndezluna/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn">
+
                             <i class="fa-brands fa-linkedin"></i>
+
                         </a>
 
 
-                        <a href="https://github.com/Cristian-Luna01" target="_blank" rel="noopener noreferrer"
+                        <a href="https://github.com/Cristian-Luna01"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             aria-label="GitHub">
+
                             <i class="fa-brands fa-github"></i>
+
                         </a>
 
 
-                        <a href="mailto:cristianlunahernandez7@gmail.com" aria-label="Correo electrónico">
+                        <a href="mailto:cristianlunahernandez7@gmail.com"
+                            aria-label="Correo electrónico">
+
                             <i class="fa-regular fa-envelope"></i>
+
                         </a>
 
                     </div>
+
 
                 </div>
 
 
-
-                <!-------------------------------tarjeta perfil-->
-
+                <!-- Creo la tarjeta lateral donde va mi fotografía -->
                 <div class="tarjeta-hero">
 
 
-                    <!-------------------------------foto perfil-->
-
+                    <!-- Inserto mi foto de perfil -->
                     <div class="contenedor-foto-perfil">
 
-                        <img src="/sources/Foto de perfil.jpg" alt="Foto de perfil de Cristian Hernández">
+                        <img src="sources/Foto de perfil.jpg"
+                            alt="Foto de perfil de Cristian Hernández">
 
                     </div>
 
 
-                    <!-------------------------------datos perfil-->
-
+                    <!-- Añado mis datos básicos de localización y enfoque -->
                     <div class="datos-perfil">
 
 
-                        <!-------------------------------ubicacion-->
-
+                        <!-- Mi país de residencia -->
                         <div class="dato-perfil">
 
                             <span>
@@ -239,8 +233,7 @@
                         </div>
 
 
-                        <!-------------------------------especialidad-->
-
+                        <!-- Lo que mejor domino -->
                         <div class="dato-perfil">
 
                             <span>
@@ -248,14 +241,13 @@
                             </span>
 
                             <p>
-                                Desarrollo Full Stack
+                                Desarrollo Frontend
                             </p>
 
                         </div>
 
 
-                        <!-------------------------------enfoque-->
-
+                        <!-- El área general a la que me dedico -->
                         <div class="dato-perfil">
 
                             <span>
@@ -280,71 +272,63 @@
 
 
 
-        <!-------------------------------sobre mi-->
-
+        <!-- Inicio la sección donde cuento un poco más sobre mí de forma personal y profesional -->
         <section id="sobre-mi">
 
             <div class="contenedor-sobre-mi">
 
 
-                <!-------------------------------titulo sobre mi-->
-
+                <!-- Título de la sección -->
                 <h2>
                     Sobre mí
                 </h2>
 
 
-                <!-------------------------------contenido sobre mi-->
-
+                <!-- Contenedor general para mis textos y mis estadísticas -->
                 <div class="contenido-sobre-mi">
 
 
-                    <!-------------------------------tarjeta sobre mi-->
-
+                    <!-- Redacto mis párrafos mezclando mi lado técnico y humano -->
                     <div class="tarjeta-sobre-mi">
 
                         <p class="texto-destacado-sobre-mi">
-                            Me interesa crear productos digitales donde
-                            tecnología, estructura y diseño trabajen juntos.
+                            La tecnología me ha fascinado desde siempre, y me interesa crear productos digitales donde
+                            la estructura y el diseño visual trabajen juntos.
                         </p>
 
 
                         <p>
-                            Soy desarrollador Java Full Stack Jr. y he participado
-                            en el diseño, desarrollo e integración de soluciones
-                            utilizando Java, JavaScript, HTML, CSS, SQL y tecnologías
-                            relacionadas con el desarrollo Full Stack.
+                            Soy un desarrollador con un enorme gusto y enfoque en el Frontend (HTML, CSS y JavaScript).
+                            Actualmente sigo reforzando mis conocimientos en tecnologías como Java y bases de datos SQL
+                            para entender el ecosistema completo y aportar más valor a mi equipo.
                         </p>
 
 
                         <p>
-                            Mi experiencia previa en el sector operativo me permitió
-                            desarrollar liderazgo, disciplina, atención al detalle,
-                            gestión de procesos y capacidad para resolver problemas.
+                            Mi experiencia previa en seguridad operativa me forjó habilidades invaluables: atención
+                            rigurosa al detalle, disciplina y la capacidad de resolver problemas manteniendo la calma
+                            bajo presión.
                         </p>
 
 
                         <p>
-                            Actualmente continúo fortaleciendo mis conocimientos
-                            mediante proyectos prácticos, trabajo colaborativo
-                            y aprendizaje constante.
+                            Fuera del código, disfruto mucho de los videojuegos competitivos en equipo y de estrategia.
+                            Me encanta practicar básquetbol y fútbol americano, tocar la guitarra en momentos muy
+                            esporádicos y realizar senderismo.
                         </p>
 
                     </div>
 
 
-
-                    <!-------------------------------estadisticas sobre mi-->
-
+                    <!-- Agrego un panel lateral con datos rápidos sobre mi progreso -->
                     <div class="estadisticas-sobre-mi">
 
 
-                        <!-------------------------------proyectos principales-->
-
+                        <!-- Cantidad de proyectos -->
                         <div class="estadistica">
 
                             <strong>
-                                02
+                                04
                             </strong>
 
                             <span>
@@ -354,8 +338,7 @@
                         </div>
 
 
-                        <!-------------------------------tecnologias-->
-
+                        <!-- Tecnologías con las que he trabajado -->
                         <div class="estadistica">
 
                             <strong>
@@ -363,14 +346,13 @@
                             </strong>
 
                             <span>
-                                Tecnologías
+                                Tecnologías conocidas
                             </span>
 
                         </div>
 
 
-                        <!-------------------------------aprendizaje continuo-->
-
+                        <!-- Mi disposición actual -->
                         <div class="estadistica">
 
                             <strong>
@@ -378,7 +360,7 @@
                             </strong>
 
                             <span>
-                                Aprendizaje continuo
+                                Disposición para aprender
                             </span>
 
                         </div>
@@ -395,53 +377,48 @@
 
 
 
-        <!-------------------------------proyectos-->
-
+        <!-- Comienzo la sección para mostrar mis proyectos web -->
         <section id="proyectos">
 
             <div class="contenedor-proyectos">
 
 
-                <!-------------------------------titulo proyectos-->
-
+                <!-- Título de mis proyectos -->
                 <h2>
                     Proyectos seleccionados
                 </h2>
 
 
                 <p class="descripcion-seccion">
-                    Una selección de proyectos académicos y colaborativos.
+                    Una selección de mis proyectos individuales, académicos y colaborativos.
                 </p>
 
 
-
-                <!-------------------------------contenedor proyectos-->
-
+                <!-- Cuadrícula para organizar las tarjetas de mis trabajos -->
                 <div class="contenedor-proyectos-articulos">
 
 
-                    <!-------------------------------zona huella-->
-
+                    <!-- Construyo la tarjeta para mi primer proyecto de la farmacia -->
                     <article class="proyecto">
 
 
-                        <!-------------------------------imagen zona huella-->
-
-
+                        <!-- Imagen principal del proyecto -->
                         <div class="imagen-proyecto">
 
-                            <a href="https://glittery-squirrel-f365e4.netlify.app/"
-                                target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto Zona Huella">
+                            <a href="https://nuvariafarmacia.online/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Ver proyecto Nuvaria Farmacia">
 
-                                <img src="sources/zona huella pagina inicio.jpg"
-                                    alt="Vista previa del proyecto Zona Huella">
+                                <img src="sources/nuvaria_farmacias_img_img_demo.png"
+                                    alt="Vista previa del proyecto Nuvaria Farmacia">
 
                             </a>
 
                         </div>
 
-                        <!-------------------------------contenido zona huella-->
 
+                        <!-- Toda la información del proyecto farmacia -->
                         <div class="contenido-proyecto">
 
 
@@ -454,9 +431,118 @@
 
                                 <div class="links-proyecto">
 
-                                    <a href="https://github.com/PauBV-09/Zona-Huella-.git" target="_blank"
-                                        rel="noopener noreferrer" aria-label="Repositorio de Zona Huella">
+                                    <a href="https://github.com/Cristian-Luna01/Nuvaria_Farmacias.git"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Repositorio de Nuvaria Farmacia">
+
                                         <i class="fa-brands fa-github"></i>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                            <h3>
+                                Nuvaria Farmacia
+                            </h3>
+
+
+                            <p>
+                                Sitio web para una farmacia enfocado en facilitar la consulta
+                                de medicamentos y el contacto directo con los clientes.
+                            </p>
+
+
+                            <!-- Describo exactamente qué programé yo -->
+                            <div class="participacion-proyecto">
+
+                                <strong>
+                                    Mi participación
+                                </strong>
+
+                                <p>
+                                    Desarrollo individual de la interfaz y lógica del sitio,
+                                    implementando un buscador dinámico sobre un catálogo de
+                                    más de 6,000 productos e integración con WhatsApp para solicitar disponibilidad.
+                                </p>
+
+                            </div>
+
+
+                            <!-- Lista de lenguajes y botón para visitar la web -->
+                            <div class="pie-proyecto">
+
+                                <ul class="tecnologias-proyecto">
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>GitHub</li>
+                                </ul>
+
+
+                                <a class="boton-ver-proyecto"
+                                    href="https://nuvariafarmacia.online/"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+
+                                    Ver proyecto
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Construyo la tarjeta para mi segundo proyecto colaborativo -->
+                    <article class="proyecto">
+
+
+                        <!-- Imagen principal de la tienda de mascotas -->
+                        <div class="imagen-proyecto">
+
+                            <a href="https://p01--zona-huella--bdynnnqh9dr2.code.run/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Ver proyecto Zona Huella">
+
+                                <img src="sources/zona huella pagina inicio.jpg"
+                                    alt="Vista previa del proyecto Zona Huella">
+
+                            </a>
+
+                        </div>
+
+
+                        <!-- Información de la tienda -->
+                        <div class="contenido-proyecto">
+
+
+                            <div class="encabezado-proyecto">
+
+                                <p class="tipo-proyecto">
+                                    E-COMMERCE
+                                </p>
+
+
+                                <div class="links-proyecto">
+
+                                    <a href="https://github.com/Cristian-Luna01/zona-huella-demo"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Repositorio de Zona Huella">
+
+                                        <i class="fa-brands fa-github"></i>
+
                                     </a>
 
                                 </div>
@@ -470,15 +556,12 @@
 
 
                             <p>
-                                Plataforma de comercio electrónico enfocada
-                                en productos para perros y gatos, incluyendo
-                                alimento, accesorios, juguetes y productos
-                                de cuidado.
+                                E-commerce de productos para perros y gatos, con catálogo de
+                                alimentos, accesorios, juguetes y artículos de cuidado.
                             </p>
 
 
-                            <!-------------------------------participacion zona huella-->
-
+                            <!-- Explico mi rol dentro del equipo -->
                             <div class="participacion-proyecto">
 
                                 <strong>
@@ -486,27 +569,39 @@
                                 </strong>
 
                                 <p>
-                                    Desarrollo y colaboración en componentes
-                                    de interfaz, estructura del sitio,
-                                    funcionalidades con JavaScript,
-                                    organización de información con SQL
-                                    e integración del trabajo en equipo.
+                                    Desarrollo del navbar, la sección Sobre Nosotros y colaboración
+                                    en la interfaz de la etapa final del proceso de pago, trabajando
+                                    principalmente en estructura, estilos y adaptación visual.
                                 </p>
 
                             </div>
 
 
-                            <!-------------------------------tecnologias zona huella-->
+                            <!-- Lista de tecnologías usadas en el e-commerce -->
+                            <div class="pie-proyecto">
 
-                            <ul class="tecnologias-proyecto">
+                                <ul class="tecnologias-proyecto">
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>Bootstrap</li>
+                                    <li>SQL</li>
+                                    <li>GitHub</li>
+                                </ul>
 
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                                <li>Bootstrap</li>
-                                <li>SQL</li>
 
-                            </ul>
+                                <a class="boton-ver-proyecto"
+                                    href="https://p01--zona-huella--bdynnnqh9dr2.code.run/"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+
+                                    Ver proyecto
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                                </a>
+
+                            </div>
 
 
                         </div>
@@ -515,41 +610,46 @@
 
 
 
-                    <!-------------------------------dicfa sport-->
-
+                    <!-- Construyo la tarjeta para mi tercer proyecto del Hackathon -->
                     <article class="proyecto">
 
 
-                        <!-------------------------------imagen dicfa sport-->
-
+                        <!-- Imagen principal de la tienda deportiva -->
                         <div class="imagen-proyecto">
 
-                            <a href="https://stupendous-manatee-6e7f4e.netlify.app/"
-                                target="_blank" rel="noopener noreferrer" aria-label="Ver proyecto DICFA Sport">
+                            <a href="https://dicfa-sports.netlify.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Ver proyecto DICFA Sport">
 
-                                <img src="sources/Dicfa pagina.jpg" alt="Vista previa del proyecto DICFA Sport">
+                                <img src="sources/Dicfa pagina.jpg"
+                                    alt="Vista previa del proyecto DICFA Sport">
 
                             </a>
 
                         </div>
 
-                        <!-------------------------------contenido dicfa sport-->
 
+                        <!-- Detalles del proyecto del hackathon -->
                         <div class="contenido-proyecto">
 
 
                             <div class="encabezado-proyecto">
 
                                 <p class="tipo-proyecto">
-                                    HACKATHON
+                                    HACKATHON - GENERATION
                                 </p>
 
 
                                 <div class="links-proyecto">
 
-                                    <a href="https://github.com/adiumx/hackaton1.git" target="_blank"
-                                        rel="noopener noreferrer" aria-label="Repositorio de DICFA Sport">
+                                    <a href="https://github.com/adiumx/hackaton1.git"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Repositorio de DICFA Sport">
+
                                         <i class="fa-brands fa-github"></i>
+
                                     </a>
 
                                 </div>
@@ -563,15 +663,12 @@
 
 
                             <p>
-                                Tienda deportiva desarrollada de forma
-                                colaborativa durante un Hackathon,
-                                con catálogo de productos y navegación
-                                por categorías.
+                                Tienda deportiva desarrollada durante un Hackathon de Generation,
+                                con catálogo de productos y navegación por categorías.
                             </p>
 
 
-                            <!-------------------------------participacion dicfa sport-->
-
+                            <!-- Mi aportación visual al proyecto -->
                             <div class="participacion-proyecto">
 
                                 <strong>
@@ -579,26 +676,142 @@
                                 </strong>
 
                                 <p>
-                                    Desarrollo de la sección Hero utilizando
-                                    HTML, CSS y Bootstrap, además de colaboración
-                                    en decisiones visuales, composición y
-                                    selección de colores.
+                                    Desarrollo del navbar y de la sección Hero, incluyendo el carrusel
+                                    principal, menú y contenido visual, además de colaborar en la
+                                    composición de la interfaz y selección de colores.
                                 </p>
 
                             </div>
 
 
-                            <!-------------------------------tecnologias dicfa sport-->
+                            <!-- Resumen técnico del hackathon -->
+                            <div class="pie-proyecto">
 
-                            <ul class="tecnologias-proyecto">
+                                <ul class="tecnologias-proyecto">
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>Bootstrap</li>
+                                    <li>GitHub</li>
+                                </ul>
 
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                                <li>Bootstrap</li>
-                                <li>Git</li>
 
-                            </ul>
+                                <a class="boton-ver-proyecto"
+                                    href="https://dicfa-sports.netlify.app/"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+
+                                    Ver proyecto
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Construyo la tarjeta para mi cuarto proyecto -->
+                    <article class="proyecto">
+
+
+                        <!-- Imagen principal de Droneros 4K -->
+                        <div class="imagen-proyecto">
+
+                            <a href="https://droneros4k.netlify.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Ver proyecto Droneros 4K">
+
+                                <img src="sources/droneros4k.png"
+                                    alt="Vista previa del proyecto Droneros 4K">
+
+                            </a>
+
+                        </div>
+
+
+                        <!-- Información del blog -->
+                        <div class="contenido-proyecto">
+
+
+                            <div class="encabezado-proyecto">
+
+                                <p class="tipo-proyecto">
+                                    BLOG DRONEROS4K - PROYECTO DE GENERATION
+                                </p>
+
+
+                                <div class="links-proyecto">
+
+                                    <a href="#"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label="Repositorio del proyecto Droneros 4K">
+
+                                        <i class="fa-brands fa-github"></i>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                            <h3>
+                                Droneros 4K
+                            </h3>
+
+
+                            <p>
+                                Blog sobre drones enfocado en experiencias de vuelo, tecnología,
+                                mantenimiento, hardware y recomendaciones para pilotos.
+                            </p>
+
+
+                            <!-- Describo mi participación en el proyecto -->
+                            <div class="participacion-proyecto">
+
+                                <strong>
+                                    Mi participación
+                                </strong>
+
+                                <p>
+                                    Proyecto individual desarrollado durante mi formación en Generation,
+                                    encargándome de la estructura, diseño e interactividad del blog,
+                                    incluyendo artículos, navegación y espacios preparados para publicidad.
+                                </p>
+
+                            </div>
+
+
+                            <div class="pie-proyecto">
+
+                                <ul class="tecnologias-proyecto">
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>GitHub</li>
+                                </ul>
+
+
+                                <a class="boton-ver-proyecto"
+                                    href="https://droneros4k.netlify.app/"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+
+                                    Ver proyecto
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                                </a>
+
+                            </div>
 
 
                         </div>
@@ -608,42 +821,42 @@
 
                 </div>
 
+
             </div>
 
         </section>
 
 
 
-        <!-------------------------------habilidades-->
-
+        <!-- Creo la sección donde separo mis habilidades de forma sincera -->
         <section id="habilidades">
 
             <div class="contenedor-seccion-habilidades">
 
 
-                <!-------------------------------titulo habilidades-->
-
+                <!-- Título de la sección de herramientas -->
                 <h2>
                     Habilidades
                 </h2>
 
 
-                <!-------------------------------contenedor habilidades-->
-
                 <div class="contenedor-habilidades">
 
 
-                    <!-------------------------------frontend-->
-
+                    <!-- Destaco primero lo que mejor domino, que es el Frontend -->
                     <div class="tarjeta-habilidad">
 
-                        <div class="icono-habilidad">
-                            <i class="fa-solid fa-code"></i>
-                        </div>
+                        <div class="cabecera-habilidad">
 
-                        <h3>
-                            Frontend
-                        </h3>
+                            <div class="icono-habilidad">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+
+                            <h3>
+                                Frontend
+                            </h3>
+
+                        </div>
 
                         <ul>
                             <li>HTML</li>
@@ -655,18 +868,20 @@
                     </div>
 
 
-
-                    <!-------------------------------backend-->
-
+                    <!-- Muestro que estoy aprendiendo Backend sin presumir ser experto -->
                     <div class="tarjeta-habilidad">
 
-                        <div class="icono-habilidad">
-                            <i class="fa-solid fa-server"></i>
-                        </div>
+                        <div class="cabecera-habilidad">
 
-                        <h3>
-                            Backend
-                        </h3>
+                            <div class="icono-habilidad">
+                                <i class="fa-solid fa-server"></i>
+                            </div>
+
+                            <h3>
+                                Backend (Básico)
+                            </h3>
+
+                        </div>
 
                         <ul>
                             <li>Java</li>
@@ -678,18 +893,20 @@
                     </div>
 
 
-
-                    <!-------------------------------datos-->
-
+                    <!-- Hago lo mismo con mi conocimiento de bases de datos -->
                     <div class="tarjeta-habilidad">
 
-                        <div class="icono-habilidad">
-                            <i class="fa-solid fa-database"></i>
-                        </div>
+                        <div class="cabecera-habilidad">
 
-                        <h3>
-                            Datos
-                        </h3>
+                            <div class="icono-habilidad">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+
+                            <h3>
+                                Datos (Básico)
+                            </h3>
+
+                        </div>
 
                         <ul>
                             <li>SQL</li>
@@ -701,18 +918,20 @@
                     </div>
 
 
-
-                    <!-------------------------------herramientas-->
-
+                    <!-- Listo las herramientas de control de versiones y metodologías -->
                     <div class="tarjeta-habilidad">
 
-                        <div class="icono-habilidad">
-                            <i class="fa-brands fa-git-alt"></i>
-                        </div>
+                        <div class="cabecera-habilidad">
 
-                        <h3>
-                            Herramientas
-                        </h3>
+                            <div class="icono-habilidad">
+                                <i class="fa-brands fa-git-alt"></i>
+                            </div>
+
+                            <h3>
+                                Herramientas
+                            </h3>
+
+                        </div>
 
                         <ul>
                             <li>Git</li>
@@ -732,28 +951,22 @@
 
 
 
-        <!-------------------------------experiencia-->
-
+        <!-- Muestro mi línea de tiempo con mi educación y experiencia de trabajo -->
         <section id="experiencia">
 
             <div class="contenedor-experiencia">
 
-
-                <!-------------------------------titulo experiencia-->
 
                 <h2>
                     Experiencia y formación
                 </h2>
 
 
-
-                <!-------------------------------linea de tiempo-->
-
+                <!-- Contenedor que forma la línea vertical -->
                 <div class="linea-tiempo">
 
 
-                    <!-------------------------------generation mexico-->
-
+                    <!-- Coloco primero mi bootcamp más reciente -->
                     <div class="elemento-linea-tiempo">
 
                         <div class="punto-linea"></div>
@@ -766,7 +979,7 @@
                             </span>
 
                             <h3>
-                                Java Full Stack Developer
+                                Java Full Stack Developer Bootcamp
                             </h3>
 
                             <h4>
@@ -774,20 +987,17 @@
                             </h4>
 
                             <p>
-                                Formación intensiva enfocada en programación,
-                                desarrollo web, Java, JavaScript, HTML, CSS,
-                                SQL, Git y metodologías ágiles.
+                                Formación intensiva enfocada en programación web,
+                                trabajando bajo metodologías ágiles y control de versiones.
                             </p>
 
                         </div>
-
 
                     </div>
 
 
 
-                    <!-------------------------------universidad cnci-->
-
+                    <!-- Añado mis estudios universitarios -->
                     <div class="elemento-linea-tiempo">
 
                         <div class="punto-linea"></div>
@@ -814,13 +1024,11 @@
 
                         </div>
 
-
                     </div>
 
 
 
-                    <!-------------------------------experiencia laboral-->
-
+                    <!-- Incluyo mi experiencia operativa porque demuestra mucha responsabilidad -->
                     <div class="elemento-linea-tiempo">
 
                         <div class="punto-linea"></div>
@@ -833,22 +1041,21 @@
                             </span>
 
                             <h3>
-                                Técnico en Seguridad
+                                Técnico en Seguridad Operativa
                             </h3>
 
                             <h4>
-                                Prometheus
+                                Prometheus / Sector Energético
                             </h4>
 
                             <p>
                                 Experiencia coordinando personal, supervisando
-                                procesos operativos, gestionando información
+                                procesos operativos, gestionando bitácoras
                                 y resolviendo situaciones dentro de entornos
                                 de alta responsabilidad.
                             </p>
 
                         </div>
-
 
                     </div>
 
@@ -856,13 +1063,15 @@
                 </div>
 
 
+                <!-- Configuro el enlace para descargar mi currículum en PDF -->
+                <a class="boton-cv"
+                    href="sources/cv cristian hernández luna.pdf"
+                    download>
 
-                <!-------------------------------descargar cv-->
-
-                <a class="boton-cv" href="sources/Cv Cristian Hernández Luna.pdf" download>
                     <i class="fa-regular fa-file-pdf"></i>
 
                     Descargar CV
+
                 </a>
 
 
@@ -872,55 +1081,49 @@
 
 
 
-        <!-------------------------------contacto-->
-
+        <!-- Cierro con la sección para que los reclutadores me contacten -->
         <section id="contacto">
 
             <div class="tarjeta-contacto">
 
 
-                <!-------------------------------parte superior contacto-->
-
+                <!-- Parte superior del bloque de contacto -->
                 <div class="parte-superior-contacto">
 
 
-                    <!-------------------------------texto contacto-->
-
+                    <!-- Agrego un texto invitando a conectar -->
                     <div class="texto-contacto">
 
                         <h2>
                             ¿Construimos algo juntos?
                         </h2>
 
-
                         <p>
-                            Estoy interesado en oportunidades donde pueda seguir
-                            creciendo como desarrollador y colaborar en proyectos
-                            tecnológicos.
+                            Busco mi primera oportunidad como desarrollador, donde pueda aportar valor al Frontend,
+                            sumar mi responsabilidad y seguir aprendiendo nuevas tecnologías.
                         </p>
 
                     </div>
 
 
-                    <!-------------------------------boton escribirme-->
+                    <!-- Botón predeterminado para abrir el correo electrónico -->
+                    <a class="boton-escribirme"
+                        href="mailto:cristianlunahernandez7@gmail.com">
 
-                    <a class="boton-escribirme" href="mailto:cristianlunahernandez7@gmail.com">
                         Escribirme
 
                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
                     </a>
 
 
                 </div>
 
 
-                <!-------------------------------linea contacto-->
-
                 <div class="linea-contacto"></div>
 
 
-                <!-------------------------------links contacto-->
-
+                <!-- Repito mis redes para que tengan mis datos a la mano -->
                 <div class="links-contacto">
 
 
@@ -933,7 +1136,8 @@
                     </a>
 
 
-                    <a href="https://www.linkedin.com/in/cristianhern%C3%A1ndezluna/" target="_blank"
+                    <a href="https://www.linkedin.com/in/cristianhern%C3%A1ndezluna/"
+                        target="_blank"
                         rel="noopener noreferrer">
 
                         <i class="fa-brands fa-linkedin"></i>
@@ -943,7 +1147,9 @@
                     </a>
 
 
-                    <a href="https://github.com/Cristian-Luna01" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/Cristian-Luna01"
+                        target="_blank"
+                        rel="noopener noreferrer">
 
                         <i class="fa-brands fa-github"></i>
 
@@ -954,7 +1160,6 @@
 
                 </div>
 
-
             </div>
 
         </section>
@@ -964,8 +1169,7 @@
 
 
 
-    <!-------------------------------footer-->
-
+    <!-- Pongo el pie de página con el copyright y el botón para subir -->
     <footer>
 
         <div class="contenedor-footer">
@@ -974,17 +1178,280 @@
                 © 2026 Cristian Hernández
             </p>
 
-
             <a href="#inicio">
+
                 Volver arriba
 
                 <i class="fa-solid fa-arrow-up"></i>
+
             </a>
 
         </div>
 
     </footer>
 
+
+
+    <!-- Script del carrusel infinito para la vista móvil -->
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const carrusel = document.getElementById("menu-carrusel");
+
+
+            // Solo ejecuto este script si la persona lo está viendo desde su celular
+            if (!carrusel || window.innerWidth > 600) {
+                return;
+            }
+
+
+            const originales = Array.from(carrusel.children);
+            const cantidadOriginal = originales.length;
+
+
+            if (cantidadOriginal === 0) {
+                return;
+            }
+
+
+            // Limpio el contenedor para insertar las copias necesarias
+            carrusel.innerHTML = "";
+
+
+            // Defino los bloques que necesito clonar para armar el ciclo continuo
+            const numeroBloques = 7;
+
+            for (let bloque = 0; bloque < numeroBloques; bloque++) {
+
+                originales.forEach(enlace => {
+
+                    const clon = enlace.cloneNode(true);
+
+                    carrusel.appendChild(clon);
+
+                });
+
+            }
+
+
+            // Mido el tamaño de los elementos y los márgenes para calcular el desplazamiento
+            const estiloCarrusel = getComputedStyle(carrusel);
+
+            const gap = parseFloat(estiloCarrusel.gap) || 12;
+
+            const primerBoton = carrusel.querySelector("a");
+
+            const anchoBoton = primerBoton.getBoundingClientRect().width;
+
+            const anchoElemento = anchoBoton + gap;
+
+            const anchoBloque = anchoElemento * cantidadOriginal;
+
+
+            const bloqueCentral = 3;
+
+
+            // Esta función me sirve para centrar correctamente cualquier botón
+            function centrarBoton(indice) {
+
+                const centroCarrusel = carrusel.clientWidth / 2;
+
+                const centroBoton = anchoBoton / 2;
+
+                carrusel.scrollLeft =
+                    (indice * anchoElemento) - centroCarrusel + centroBoton;
+
+            }
+
+
+            // Ajusto la posición al cargar la página para que arranque desde el centro
+            setTimeout(() => {
+
+                const indiceSobreMi =
+                    (bloqueCentral * cantidadOriginal) + 1;
+
+                const comportamientoAnterior =
+                    carrusel.style.scrollBehavior;
+
+
+                carrusel.style.scrollBehavior = "auto";
+
+                centrarBoton(indiceSobreMi);
+
+                carrusel.style.scrollBehavior =
+                    comportamientoAnterior;
+
+            }, 100);
+
+
+            let recolocando = false;
+
+
+            // Lógica para reiniciar la posición del scroll de manera invisible
+            function mantenerInfinito() {
+
+                if (recolocando) {
+                    return;
+                }
+
+
+                const posicionActual =
+                    carrusel.scrollLeft;
+
+
+                // Si el usuario mueve mucho hacia la izquierda, lo regreso disimuladamente
+                if (posicionActual < anchoBloque * 1.5) {
+
+                    recolocando = true;
+
+                    const comportamientoAnterior =
+                        carrusel.style.scrollBehavior;
+
+                    const snapAnterior =
+                        carrusel.style.scrollSnapType;
+
+
+                    carrusel.style.scrollBehavior = "auto";
+
+                    carrusel.style.scrollSnapType = "none";
+
+                    carrusel.scrollLeft =
+                        posicionActual + (anchoBloque * 3);
+
+
+                    requestAnimationFrame(() => {
+
+                        carrusel.style.scrollBehavior =
+                            comportamientoAnterior;
+
+                        carrusel.style.scrollSnapType =
+                            snapAnterior;
+
+                        recolocando = false;
+
+                    });
+
+                }
+
+
+                // Hago lo mismo si hace scroll demasiado hacia la derecha
+                else if (posicionActual > anchoBloque * 4.5) {
+
+                    recolocando = true;
+
+                    const comportamientoAnterior =
+                        carrusel.style.scrollBehavior;
+
+                    const snapAnterior =
+                        carrusel.style.scrollSnapType;
+
+
+                    carrusel.style.scrollBehavior = "auto";
+
+                    carrusel.style.scrollSnapType = "none";
+
+                    carrusel.scrollLeft =
+                        posicionActual - (anchoBloque * 3);
+
+
+                    requestAnimationFrame(() => {
+
+                        carrusel.style.scrollBehavior =
+                            comportamientoAnterior;
+
+                        carrusel.style.scrollSnapType =
+                            snapAnterior;
+
+                        recolocando = false;
+
+                    });
+
+                }
+
+            }
+
+
+            // Escucho el evento de scroll para mantener el efecto infinito
+            carrusel.addEventListener(
+                "scroll",
+                mantenerInfinito,
+                { passive: true }
+            );
+
+
+            let intervalo;
+
+
+            // Función para mover el menú en automático
+            function iniciarAutoplay() {
+
+                clearInterval(intervalo);
+
+                intervalo = setInterval(() => {
+
+                    carrusel.scrollBy({
+
+                        left: anchoElemento,
+
+                        behavior: "smooth"
+
+                    });
+
+                }, 3000);
+
+            }
+
+
+            iniciarAutoplay();
+
+
+            let reinicioAutoplay;
+
+
+            // Pauso la animación si detecto que tocan la pantalla
+            carrusel.addEventListener("touchstart", () => {
+
+                clearInterval(intervalo);
+
+                clearTimeout(reinicioAutoplay);
+
+            }, { passive: true });
+
+
+            // Reanudo la animación tras soltar la pantalla
+            carrusel.addEventListener("touchend", () => {
+
+                mantenerInfinito();
+
+                clearTimeout(reinicioAutoplay);
+
+                reinicioAutoplay = setTimeout(() => {
+
+                    iniciarAutoplay();
+
+                }, 4000);
+
+            }, { passive: true });
+
+
+            // Evito interferencias si hay hover (en un entorno que lo soporte)
+            carrusel.addEventListener("mouseenter", () => {
+
+                clearInterval(intervalo);
+
+            });
+
+
+            carrusel.addEventListener("mouseleave", () => {
+
+                iniciarAutoplay();
+
+            });
+
+        });
+
+    </script>
 
 </body>
 

@@ -1,5 +1,4 @@
-/*-------------------------------general*/
-
+/* Configuraciones globales para toda la página */
 * {
     box-sizing: border-box;
 }
@@ -10,26 +9,27 @@ html {
 
 body {
     background:
-        radial-gradient(ellipse at 105% 80%,
-            rgba(55, 70, 180, 0.14),
-            transparent 45%),
-        radial-gradient(ellipse at -10% 0%,
-            rgba(80, 60, 200, 0.18),
-            transparent 55%),
+        radial-gradient(
+            ellipse at 105% 80%,
+            rgba(81, 60, 200, 0.500),
+            transparent 45%
+
+        ),
+        radial-gradient(
+            ellipse at -10% 0%,
+            rgba(81, 60, 200, 0.500),
+            transparent 55%
+        ),
         #050505;
-
     background-attachment: fixed;
-
     color: white;
-
     margin: 0;
-
     font-family: "Inter", sans-serif;
+    overflow-x: hidden;
 }
 
 a {
     color: white;
-
     text-decoration: none;
 }
 
@@ -37,9 +37,7 @@ section {
     padding: 100px 40px;
 }
 
-
-/*-------------------------------posicion scroll secciones*/
-
+/* Espaciado del scroll superior para que el navbar no tape los títulos */
 #sobre-mi {
     scroll-margin-top: 90px;
 }
@@ -60,101 +58,81 @@ section {
     scroll-margin-top: 90px;
 }
 
-
-/*-------------------------------navbar*/
-
+/* Estilos de la barra de navegación */
 header {
     position: fixed;
-
     top: 0;
     left: 0;
-
     width: 100%;
-
     z-index: 1000;
 }
 
-
-/*-------------------------------mascara superior navbar*/
-
+/* Degradado superior para suavizar la barra flotante */
 header::before {
     content: "";
-
     position: absolute;
-
     top: 0;
     left: 0;
 
     width: 100%;
-    height: 24px;
+    height: 20px;
 
-    background: linear-gradient(to right,
-            transparent 0%,
-            rgba(5, 5, 5, 0.75) 4%,
-            #050505 12%,
-            #050505 88%,
-            rgba(5, 5, 5, 0.75) 96%,
-            transparent 100%);
+    background:
+        radial-gradient(
+            ellipse at 105% 80%,
+            rgba(81, 60, 200, 0.500),
+            transparent 45%
+        ),
+        radial-gradient(
+            ellipse at -10% 0%,
+            rgba(81, 60, 200, 0.500),
+            transparent 55%
+        ),
+        #050505;
+
+    background-size: 100vw 100vh;
+    background-position: top left;
+    background-repeat: no-repeat;
+
+    pointer-events: none;
 }
 
-
-/*-------------------------------contenedor navbar*/
-
+/* Caja principal del navbar */
 nav {
+    width: calc(100% - 80px);
+    max-width: 1700px;
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     gap: 30px;
-
     padding: 11px 40px;
-
-    margin: 20px;
-
-    background-color: rgba(255, 255, 255, 0.05);
-
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.205);
     border: 1px solid rgba(255, 255, 255, 0.12);
-
     border-radius: 20px;
-
     backdrop-filter: blur(15px);
-
     -webkit-backdrop-filter: blur(15px);
-
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.06);
-
     position: relative;
-
     z-index: 1;
 }
 
-
-/*-------------------------------iniciales navbar*/
-
+/* Mis iniciales en el navbar */
 .iniciales-navbar a {
     font-size: 20px;
-
     font-weight: 900;
 }
 
-
-/*-------------------------------enlaces navbar*/
-
+/* Los links principales dentro del menú */
 .enlaces-navbar {
     display: flex;
-
     gap: 30px;
-
     align-items: center;
 }
 
 nav a {
     font-size: 15px;
-
     color: #fdfdfd;
-
     transition: color 0.3s ease;
 }
 
@@ -162,131 +140,93 @@ nav a:hover {
     color: white;
 }
 
-
-/*-------------------------------boton contacto navbar*/
-
+/* Botón de contacto en el navbar */
 .boton-navbar {
     padding: 10px 18px;
-
     background-color: rgba(255, 255, 255, 0.10);
-
     border: 1px solid rgba(255, 255, 255, 0.12);
-
     border-radius: 10px;
-
     color: white;
 }
 
 .boton-navbar:hover {
     background-color: rgba(255, 255, 255, 0.16);
-
     color: white;
 }
 
-
-/*-------------------------------inicio*/
-
+/* Sección de inicio o Hero */
 #inicio {
     min-height: 100vh;
-
     padding-top: 140px;
-
     display: flex;
-
     align-items: center;
 }
 
-
-/*-------------------------------contenedor hero*/
-
+/* Contenedor de mi info y foto */
 .contenedor-de-mis-datos-hero {
     width: 100%;
-
     max-width: 1200px;
-
     margin: 0 auto;
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     gap: 90px;
 }
 
-
-/*-------------------------------contenido hero*/
-
+/* Textos del hero */
 .contenido-hero {
     flex: 1;
-
     max-width: 650px;
 }
 
+.cabecera-hero {
+    display: block;
+}
 
-/*-------------------------------estado disponibilidad*/
-
+/* Indicador de que busco trabajo */
 .estado-disponibilidad {
     display: inline-flex;
-
     align-items: center;
-
     gap: 10px;
-
     padding: 10px 14px;
-
     margin-bottom: 28px;
-
     border: 1px solid rgba(255, 255, 255, 0.12);
-
     border-radius: 999px;
-
     background-color: rgba(255, 255, 255, 0.03);
 }
 
 .estado-disponibilidad span {
     width: 8px;
     height: 8px;
-
     border-radius: 50%;
-
     background-color: #7ee787;
 }
 
 .estado-disponibilidad p {
     margin: 0;
-
     font-size: 14px;
-
-    color: #a1a1aa;
+    color: #c9c9ce;
 }
 
-
-/*-------------------------------etiqueta portafolio*/
-
+/* Etiqueta decorativa del año */
 .etiqueta-portafolio {
     margin: 0 0 18px 0;
-
     font-size: 12px;
-
     letter-spacing: 6px;
-
-    color: #71717a;
+    color: #d0d0d0;
 }
 
+/* Oculto el texto de WhatsApp en pantallas grandes para usar el icono */
+.whatsapp-movil {
+    display: none;
+}
 
-/*-------------------------------nombre principal*/
-
+/* Mi nombre principal */
 #inicio h1 {
     margin: 0 0 26px 0;
-
     font-size: 112px;
-
     font-weight: 700;
-
     line-height: 0.90;
-
     letter-spacing: -5px;
 }
 
@@ -299,74 +239,48 @@ nav a:hover {
 }
 
 .apellido-principal {
-    color: #707075;
+    color: #a8a8ae;
 }
 
-
-/*-------------------------------puesto profesional*/
-
+/* Mi puesto actual */
 #inicio h2 {
     margin: 0 0 26px 0;
-
     font-size: 32px;
-
     font-weight: 500;
-
     color: #d4d4d4;
 }
 
-
-/*-------------------------------descripcion hero*/
-
+/* Texto de descripción bajo mi puesto */
 .descripcion-hero {
     max-width: 580px;
-
     margin: 0;
-
     font-size: 16px;
-
     line-height: 1.8;
-
-    color: #a1a1aa;
+    color: #c9c9ce;
 }
 
-
-/*-------------------------------botones hero*/
-
+/* Botones principales de acción */
 .botones-hero {
     display: flex;
-
     gap: 14px;
-
     margin-top: 34px;
 }
 
 .botones-hero a {
     min-height: 48px;
-
     padding: 0 22px;
-
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
-
     gap: 10px;
-
     border-radius: 12px;
-
     font-size: 15px;
 }
 
-
-/*-------------------------------boton principal hero*/
-
+/* Estilo para mi botón principal */
 .boton-principal {
     background-color: #eeeeee;
-
     color: #161616;
-
     transition: background-color 0.3s ease;
 }
 
@@ -374,14 +288,10 @@ nav a:hover {
     background-color: #d4d4d4;
 }
 
-
-/*-------------------------------boton secundario hero*/
-
+/* Estilo para el botón de contacto secundario */
 .boton-secundario {
     border: 1px solid rgba(255, 255, 255, 0.15);
-
     background-color: rgba(255, 255, 255, 0.03);
-
     transition: background-color 0.3s ease;
 }
 
@@ -389,35 +299,23 @@ nav a:hover {
     background-color: rgba(255, 255, 255, 0.08);
 }
 
-
-/*-------------------------------redes hero*/
-
+/* Enlaces a mis redes sociales */
 .redes-hero {
     display: flex;
-
     gap: 10px;
-
     margin-top: 22px;
 }
 
 .redes-hero a {
     width: 42px;
     height: 42px;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     border: 1px solid rgba(255, 255, 255, 0.12);
-
     border-radius: 10px;
-
     background-color: rgba(255, 255, 255, 0.03);
-
-    color: #a1a1aa;
-
+    color: #c9c9ce;
     transition:
         background-color 0.3s ease,
         color 0.3s ease;
@@ -425,7 +323,6 @@ nav a:hover {
 
 .redes-hero a:hover {
     background-color: rgba(255, 255, 255, 0.08);
-
     color: white;
 }
 
@@ -433,62 +330,43 @@ nav a:hover {
     font-size: 17px;
 }
 
-
-/*-------------------------------tarjeta hero*/
-
+/* Contenedor flotante para la foto de perfil */
 .tarjeta-hero {
     width: 390px;
-
     flex-shrink: 0;
-
     padding: 20px;
-
     border-radius: 22px;
-
     background-color: rgba(255, 255, 255, 0.035);
-
     border: 1px solid rgba(255, 255, 255, 0.13);
-
     backdrop-filter: blur(15px);
-
     -webkit-backdrop-filter: blur(15px);
-
     box-shadow: 0 15px 9px rgba(0, 0, 0, 0.35);
 }
 
-
-/*-------------------------------foto perfil*/
-
+/* Mi foto de perfil */
 .contenedor-foto-perfil {
     margin-bottom: 18px;
 }
 
 .contenedor-foto-perfil img {
     width: 100%;
-
     aspect-ratio: 4 / 5;
-
     object-fit: cover;
-
     display: block;
-
     border-radius: 16px;
 }
 
-
-/*-------------------------------datos perfil*/
+/* Información adicional bajo mi foto */
+.datos-perfil {
+    display: block;
+}
 
 .dato-perfil {
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     gap: 20px;
-
     padding: 14px 2px;
-
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -498,120 +376,80 @@ nav a:hover {
 
 .dato-perfil span {
     font-size: 13px;
-
-    color: #71717a;
+    color: #b8b8bd;
 }
 
 .dato-perfil p {
     margin: 0;
-
     font-size: 13px;
-
     color: #d4d4d4;
-
     text-align: right;
 }
 
-
-/*-------------------------------sobre mi*/
-
+/* Estilos de la sección Sobre mí */
 .contenedor-sobre-mi {
     max-width: 1200px;
-
     margin: 0 auto;
 }
 
-
-/*-------------------------------titulo sobre mi*/
-
+/* Título de la sección */
 .contenedor-sobre-mi h2 {
     margin: 0 0 55px 0;
-
     font-size: 58px;
-
     font-weight: 500;
-
     letter-spacing: -3px;
 }
 
-
-/*-------------------------------contenido sobre mi*/
-
+/* Caja de contenido Sobre mí */
 .contenido-sobre-mi {
     display: flex;
-
     gap: 20px;
-
     align-items: stretch;
 }
 
-
-/*-------------------------------tarjeta sobre mi*/
-
+/* Tarjeta principal con el texto descriptivo */
 .tarjeta-sobre-mi {
     flex: 2;
-
     padding: 36px;
-
     border: 1px solid rgba(255, 255, 255, 0.12);
-
     border-radius: 22px;
-
     background-color: rgba(255, 255, 255, 0.04);
-
     backdrop-filter: blur(12px);
-
     -webkit-backdrop-filter: blur(12px);
 }
 
 .texto-destacado-sobre-mi {
     margin: 0 0 32px 0;
-
     max-width: 760px;
-
     font-size: 31px;
-
     line-height: 1.35;
-
     color: #eeeeee;
 }
 
 .tarjeta-sobre-mi p:not(.texto-destacado-sobre-mi) {
     margin: 0 0 18px 0;
-
     font-size: 14px;
-
     line-height: 1.7;
-
-    color: #a1a1aa;
+    color: #c9c9ce;
 }
 
 .tarjeta-sobre-mi p:last-child {
     margin-bottom: 0;
 }
 
-
-/*-------------------------------estadisticas sobre mi*/
-
+/* Tarjeta secundaria con mis estadísticas */
 .estadisticas-sobre-mi {
     flex: 1;
-
     padding: 34px;
-
     border: 1px solid rgba(255, 255, 255, 0.12);
-
     border-radius: 22px;
-
     background-color: rgba(255, 255, 255, 0.04);
-
     backdrop-filter: blur(12px);
-
     -webkit-backdrop-filter: blur(12px);
 }
 
 .estadistica {
     padding: 22px 0 30px 0;
-
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -621,79 +459,55 @@ nav a:hover {
 
 .estadistica:last-child {
     padding-bottom: 0;
-
     border-bottom: none;
 }
 
 .estadistica strong {
     display: block;
-
     margin-bottom: 18px;
-
     font-size: 38px;
-
     font-weight: 600;
 }
 
 .estadistica span {
     font-size: 12px;
-
-    color: #71717a;
+    color: #b8b8bd;
 }
 
-
-/*-------------------------------proyectos*/
-
+/* Sección de proyectos */
 .contenedor-proyectos {
     max-width: 1200px;
-
     margin: 0 auto;
 }
 
-
-/*-------------------------------titulo proyectos*/
-
-.contenedor-proyectos>h2 {
+/* Textos introductorios de mis proyectos */
+.contenedor-proyectos > h2 {
     margin: 0 0 12px 0;
-
     font-size: 58px;
-
     font-weight: 500;
-
     letter-spacing: -3px;
 }
 
 .descripcion-seccion {
     margin: 0 0 55px 0;
-
-    color: #a1a1aa;
-
+    color: #c9c9ce;
     font-size: 15px;
 }
 
-
-/*-------------------------------contenedor proyectos*/
-
+/* Grid que organiza las tarjetas de proyectos */
 .contenedor-proyectos-articulos {
-    display: flex;
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
-
-/*-------------------------------tarjeta proyecto*/
-
+/* Estructura general para cada tarjeta de proyecto */
 .proyecto {
-    flex: 1;
-
+    min-width: 0;
     overflow: hidden;
-
     border-radius: 20px;
-
     border: 1px solid rgba(255, 255, 255, 0.13);
-
     background-color: rgba(255, 255, 255, 0.04);
-
     transition:
         transform 0.3s ease,
         background-color 0.3s ease;
@@ -701,36 +515,27 @@ nav a:hover {
 
 .proyecto:hover {
     transform: translateY(-5px);
-
     background-color: rgba(255, 255, 255, 0.055);
 }
 
-
-/*-------------------------------imagen proyecto*/
-
+/* Imagen de portada de cada proyecto */
 .imagen-proyecto {
-    height: 285px;
-
+    height: 230px;
     overflow: hidden;
-
     border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
 
 .imagen-proyecto a {
     width: 100%;
     height: 100%;
-
     display: block;
 }
 
 .imagen-proyecto img {
     width: 100%;
     height: 100%;
-
     display: block;
-
     object-fit: cover;
-
     transition: transform 0.4s ease;
 }
 
@@ -738,56 +543,39 @@ nav a:hover {
     transform: scale(1.03);
 }
 
-
-/*-------------------------------contenido proyecto*/
-
+/* Contenido de la tarjeta de proyecto */
 .contenido-proyecto {
-    padding: 26px;
+    padding: 22px;
 }
 
 .encabezado-proyecto {
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
 }
 
 .tipo-proyecto {
     margin: 0;
-
     font-size: 11px;
-
     letter-spacing: 4px;
-
-    color: #71717a;
+    color: #b8b8bd;
 }
 
-
-/*-------------------------------links proyecto*/
-
+/* Iconos o enlaces adicionales en cada proyecto (ej. GitHub) */
 .links-proyecto {
     display: flex;
-
     gap: 8px;
 }
 
 .links-proyecto a {
     width: 36px;
     height: 36px;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     border: 1px solid rgba(255, 255, 255, 0.12);
-
     border-radius: 9px;
-
-    color: #a1a1aa;
-
+    color: #c9c9ce;
     transition:
         background-color 0.3s ease,
         color 0.3s ease;
@@ -795,42 +583,29 @@ nav a:hover {
 
 .links-proyecto a:hover {
     color: white;
-
     background-color: rgba(255, 255, 255, 0.08);
 }
 
 .proyecto h3 {
-    margin: 20px 0 12px 0;
-
-    font-size: 25px;
-
+    margin: 18px 0 10px 0;
+    font-size: 23px;
     font-weight: 500;
 }
 
-.proyecto>.contenido-proyecto>p {
+.proyecto > .contenido-proyecto > p {
     margin: 0;
-
     min-height: 56px;
-
     font-size: 14px;
-
     line-height: 1.7;
-
-    color: #a1a1aa;
+    color: #c9c9ce;
 }
 
-
-/*-------------------------------participacion proyecto*/
-
+/* Detalle de las tareas que realicé en el proyecto */
 .participacion-proyecto {
-    margin-top: 24px;
-
-    padding: 18px;
-
+    margin-top: 22px;
+    padding: 16px;
     border: 1px solid rgba(255, 255, 255, 0.08);
-
     border-radius: 12px;
-
     background-color: rgba(255, 255, 255, 0.025);
 }
 
@@ -840,94 +615,103 @@ nav a:hover {
 
 .participacion-proyecto p {
     margin: 12px 0 0 0;
-
     font-size: 12px;
-
     line-height: 1.6;
-
-    color: #71717a;
+    color: #b8b8bd;
 }
 
+/* Pie de la tarjeta donde agrego las tecnologías y el link final */
+.pie-proyecto {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 18px;
+}
 
-/*-------------------------------tecnologias proyecto*/
-
+/* Lista de tecnologías que utilicé */
 .tecnologias-proyecto {
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 8px;
-
     list-style: none;
-
     padding: 0;
+    margin: 20px 0 0 0;
+}
 
-    margin: 22px 0 0 0;
+.pie-proyecto .tecnologias-proyecto {
+    flex: 1;
+    min-width: 0;
 }
 
 .tecnologias-proyecto li {
     padding: 7px 10px;
-
     border: 1px solid rgba(255, 255, 255, 0.10);
-
     border-radius: 7px;
-
     background-color: rgba(255, 255, 255, 0.03);
-
     font-size: 11px;
-
-    color: #b8b8b8;
+    color: #d4d4d4;
 }
 
+/* Botón principal para ir al sitio en vivo */
+.boton-ver-proyecto {
+    flex-shrink: 0;
+    margin-top: 20px;
+    padding: 10px 14px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    border: 1px solid #eeeeee;
+    border-radius: 9px;
+    background-color: #eeeeee;
+    color: #161616;
+    font-size: 11px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
 
-/*-------------------------------habilidades*/
+.boton-ver-proyecto:hover {
+    background-color: #d4d4d4;
+    color: #161616;
+    transform: translateY(-2px);
+}
 
+.boton-ver-proyecto i {
+    font-size: 9px;
+}
+
+/* Sección de habilidades técnicas */
 .contenedor-seccion-habilidades {
     max-width: 1200px;
-
     margin: 0 auto;
-
     margin-bottom: 50px;
 }
 
-
-/*-------------------------------titulo habilidades*/
-
+/* Título de habilidades */
 .contenedor-seccion-habilidades h2 {
     margin: 0 0 55px 0;
-
     font-size: 58px;
-
     font-weight: 500;
-
     letter-spacing: -3px;
 }
 
-
-/*-------------------------------contenedor habilidades*/
-
+/* Caja de las tarjetas de herramientas */
 .contenedor-habilidades {
     display: flex;
-
     gap: 20px;
 }
 
-
-/*-------------------------------tarjeta habilidad*/
-
+/* Tarjeta individual por área de conocimiento */
 .tarjeta-habilidad {
     flex: 1;
-
     min-height: 260px;
-
     padding: 28px;
-
     border: 1px solid rgba(255, 255, 255, 0.12);
-
     border-radius: 20px;
-
     background-color: rgba(255, 255, 255, 0.04);
-
     transition:
         transform 0.3s ease,
         background-color 0.3s ease;
@@ -935,31 +719,24 @@ nav a:hover {
 
 .tarjeta-habilidad:hover {
     transform: translateY(-4px);
-
     background-color: rgba(255, 255, 255, 0.06);
 }
 
-
-/*-------------------------------icono habilidad*/
+/* Contenido interno de la tarjeta de habilidad */
+.cabecera-habilidad {
+    display: block;
+}
 
 .icono-habilidad {
     width: 44px;
     height: 44px;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     margin-bottom: 26px;
-
     border: 1px solid rgba(255, 255, 255, 0.10);
-
     border-radius: 12px;
-
     background-color: rgba(255, 255, 255, 0.04);
-
     color: #d4d4d4;
 }
 
@@ -969,161 +746,106 @@ nav a:hover {
 
 .tarjeta-habilidad h3 {
     margin: 0 0 22px 0;
-
     font-size: 17px;
-
     font-weight: 500;
 }
 
 .tarjeta-habilidad ul {
     list-style: none;
-
     padding: 0;
-
     margin: 0;
 }
 
 .tarjeta-habilidad li {
     margin-bottom: 11px;
-
-    color: #71717a;
-
+    color: #d4d4d4;
     font-size: 13px;
 }
 
-
-/*-------------------------------experiencia*/
-
+/* Sección de mi historial y experiencia */
 .contenedor-experiencia {
     max-width: 1200px;
-
     margin: 0 auto;
 }
 
-
-/*-------------------------------titulo experiencia*/
-
-.contenedor-experiencia>h2 {
+.contenedor-experiencia > h2 {
     margin: 0 0 55px 0;
-
     font-size: 58px;
-
     font-weight: 500;
-
     letter-spacing: -3px;
 }
 
-
-/*-------------------------------linea de tiempo*/
-
+/* Contenedor principal de la línea de tiempo (Timeline) */
 .linea-tiempo {
     max-width: 760px;
-
     margin: 0 auto;
-
     padding-left: 45px;
-
     border-left: 1px solid rgba(255, 255, 255, 0.13);
 }
 
 .elemento-linea-tiempo {
     position: relative;
-
     margin-bottom: 26px;
 }
 
-
-/*-------------------------------punto linea de tiempo*/
-
+/* Círculo decorativo en la línea de tiempo */
 .punto-linea {
     position: absolute;
-
     width: 9px;
     height: 9px;
-
     left: -50px;
     top: 32px;
-
     border-radius: 50%;
-
     background-color: #d4d4d4;
-
     box-shadow: 0 0 12px rgba(255, 255, 255, 0.30);
 }
 
-
-/*-------------------------------tarjeta experiencia*/
-
+/* Detalles de cada experiencia laboral/estudiantil */
 .tarjeta-experiencia {
     padding: 26px;
-
     border: 1px solid rgba(255, 255, 255, 0.12);
-
     border-radius: 18px;
-
     background-color: rgba(255, 255, 255, 0.04);
 }
 
-.tarjeta-experiencia>span {
+.tarjeta-experiencia > span {
     font-size: 10px;
-
     letter-spacing: 4px;
-
-    color: #71717a;
+    color: #d4d4d4;
 }
 
 .tarjeta-experiencia h3 {
     margin: 14px 0 4px 0;
-
     font-size: 20px;
-
     font-weight: 500;
 }
 
 .tarjeta-experiencia h4 {
     margin: 0;
-
     font-size: 12px;
-
     font-weight: 400;
-
-    color: #71717a;
+    color: #d4d4d4;
 }
 
 .tarjeta-experiencia p {
     margin: 18px 0 0 0;
-
     font-size: 13px;
-
     line-height: 1.7;
-
-    color: #a1a1aa;
+    color: #c9c9ce;
 }
 
-
-/*-------------------------------boton descargar cv*/
-
+/* Botón para que descarguen mi CV */
 .boton-cv {
     width: fit-content;
-
     margin: 35px auto 0 auto;
-
     padding: 12px 18px;
-
     display: flex;
-
     align-items: center;
-
     gap: 8px;
-
     border: 1px solid rgba(255, 255, 255, 0.12);
-
     border-radius: 10px;
-
     background-color: rgba(255, 255, 255, 0.05);
-
     font-size: 13px;
-
     transition: background-color 0.3s ease;
 }
 
@@ -1131,51 +853,30 @@ nav a:hover {
     background-color: rgba(255, 255, 255, 0.10);
 }
 
-
-/*-------------------------------contacto*/
-
+/* Sección de contacto final */
 #contacto {
     padding-top: 120px;
-
     padding-bottom: 80px;
 }
 
-
-/*-------------------------------tarjeta contacto*/
-
 .tarjeta-contacto {
     max-width: 1200px;
-
     margin: 0 auto;
-
     padding: 48px;
-
     border: 1px solid rgba(255, 255, 255, 0.13);
-
     border-radius: 22px;
-
     background-color: rgba(255, 255, 255, 0.04);
-
     backdrop-filter: blur(14px);
-
     -webkit-backdrop-filter: blur(14px);
 }
 
-
-/*-------------------------------parte superior contacto*/
-
+/* Agrupación superior de la caja de contacto */
 .parte-superior-contacto {
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     gap: 60px;
 }
-
-
-/*-------------------------------texto contacto*/
 
 .texto-contacto {
     max-width: 720px;
@@ -1183,48 +884,30 @@ nav a:hover {
 
 .texto-contacto h2 {
     margin: 0 0 12px 0;
-
     font-size: 52px;
-
     font-weight: 500;
-
     letter-spacing: -3px;
 }
 
 .texto-contacto p {
     max-width: 620px;
-
     margin: 0;
-
     font-size: 15px;
-
     line-height: 1.7;
-
-    color: #a1a1aa;
+    color: #c9c9ce;
 }
 
-
-/*-------------------------------boton escribirme*/
-
+/* Botón directo a mi correo electrónico */
 .boton-escribirme {
     flex-shrink: 0;
-
     padding: 14px 20px;
-
     display: inline-flex;
-
     align-items: center;
-
     gap: 9px;
-
     background-color: #eeeeee;
-
     color: #151515;
-
     border-radius: 10px;
-
     font-size: 13px;
-
     transition: background-color 0.3s ease;
 }
 
@@ -1236,41 +919,27 @@ nav a:hover {
     font-size: 11px;
 }
 
-
-/*-------------------------------linea contacto*/
-
+/* Divisor visual dentro de contacto */
 .linea-contacto {
     width: 100%;
-
     height: 1px;
-
     margin: 42px 0 26px 0;
-
     background-color: rgba(255, 255, 255, 0.08);
 }
 
-
-/*-------------------------------links contacto*/
-
+/* Enlaces directos a mi información en el footer de contacto */
 .links-contacto {
     display: flex;
-
     align-items: center;
-
     gap: 24px;
 }
 
 .links-contacto a {
     display: inline-flex;
-
     align-items: center;
-
     gap: 8px;
-
-    color: #8c8c94;
-
+    color: #c2c2c7;
     font-size: 13px;
-
     transition: color 0.3s ease;
 }
 
@@ -1282,34 +951,21 @@ nav a:hover {
     font-size: 13px;
 }
 
-
-/*-------------------------------footer*/
-
+/* Pie de página (Footer) */
 footer {
     padding: 0 40px 35px 40px;
 }
 
-
-/*-------------------------------contenido footer*/
-
 .contenedor-footer {
     max-width: 1200px;
-
     margin: 0 auto;
-
     padding-top: 25px;
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     border-top: 1px solid rgba(255, 255, 255, 0.10);
-
     font-size: 11px;
-
-    color: #71717a;
+    color: #b8b8bd;
 }
 
 .contenedor-footer p {
@@ -1318,15 +974,10 @@ footer {
 
 .contenedor-footer a {
     display: inline-flex;
-
     align-items: center;
-
     gap: 6px;
-
-    color: #71717a;
-
+    color: #b8b8bd;
     font-size: 11px;
-
     transition: color 0.3s ease;
 }
 
@@ -1338,7 +989,1062 @@ footer {
     font-size: 9px;
 }
 
+/* Media query para ajustarme a pantallas de laptop o resoluciones medias */
+@media (max-width: 1550px) {
 
-/*-------------------------------responsive*/
+    /* Espaciado general más compacto */
+    section {
+        padding: 65px 35px;
+    }
 
-@media (max-width: 768px) {}
+    /* Reducción en el tamaño de las tipografías de título */
+    .contenedor-sobre-mi h2,
+    .contenedor-proyectos > h2,
+    .contenedor-seccion-habilidades h2,
+    .contenedor-experiencia > h2 {
+        font-size: 38px;
+        margin-bottom: 30px;
+    }
+
+    .descripcion-seccion {
+        font-size: 13.5px;
+        margin-bottom: 35px;
+    }
+
+    /* Ajustes visuales en el menú de navegación */
+    nav {
+        width: calc(100% - 70px);
+        max-width: 1230px;
+        margin: 20px auto;
+        padding: 6px 20px;
+    }
+
+    .enlaces-navbar {
+        gap: 16px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .boton-navbar {
+        padding: 7px 12px;
+    }
+
+    /* Reducción de márgenes en la sección principal */
+    #inicio {
+        padding-top: 100px;
+        padding-bottom: 30px;
+    }
+
+    .contenedor-de-mis-datos-hero {
+        max-width: 1000px;
+        justify-content: center;
+        gap: 35px;
+    }
+
+    /* Ajusto mi nombre para que no quede tan grande en laptop */
+    #inicio h1 {
+        font-size: 70px;
+        letter-spacing: -2.5px;
+        margin-bottom: 15px;
+    }
+
+    #inicio h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .descripcion-hero {
+        max-width: 460px;
+        font-size: 13.5px;
+        line-height: 1.5;
+    }
+
+    .botones-hero {
+        margin-top: 20px;
+    }
+
+    .botones-hero a {
+        min-height: 38px;
+        padding: 0 18px;
+        font-size: 12.5px;
+    }
+
+    .estado-disponibilidad {
+        padding: 7px 11px;
+        margin-bottom: 20px;
+    }
+
+    .estado-disponibilidad p {
+        font-size: 12px;
+    }
+
+    /* Disminuyo un poco la caja de mi foto */
+    .tarjeta-hero {
+        width: 270px;
+        padding: 14px;
+    }
+
+    .contenedor-foto-perfil {
+        margin-bottom: 14px;
+    }
+
+    .dato-perfil {
+        padding: 10px 2px;
+    }
+
+    .dato-perfil span,
+    .dato-perfil p {
+        font-size: 11px;
+    }
+
+    /* Sección de Sobre mí */
+    .contenido-sobre-mi {
+        gap: 16px;
+    }
+
+    .tarjeta-sobre-mi {
+        padding: 24px;
+    }
+
+    .texto-destacado-sobre-mi {
+        font-size: 21px;
+        margin-bottom: 18px;
+    }
+
+    .tarjeta-sobre-mi p:not(.texto-destacado-sobre-mi) {
+        font-size: 12.5px;
+        margin-bottom: 12px;
+    }
+
+    .estadisticas-sobre-mi {
+        padding: 24px;
+    }
+
+    .estadistica {
+        padding: 16px 0;
+    }
+
+    .estadistica strong {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .estadistica span {
+        font-size: 11px;
+    }
+
+    /* Retoques en el grid de proyectos */
+    .contenedor-proyectos-articulos {
+        gap: 16px;
+        margin-bottom: 100px;
+    }
+
+    .imagen-proyecto {
+        height: 160px;
+    }
+
+    .contenido-proyecto {
+        padding: 16px;
+    }
+
+    .proyecto h3 {
+        font-size: 18px;
+        margin: 10px 0 6px 0;
+    }
+
+    .proyecto > .contenido-proyecto > p {
+        font-size: 12.5px;
+        min-height: auto;
+    }
+
+    .participacion-proyecto {
+        margin-top: 14px;
+        padding: 12px;
+    }
+
+    .participacion-proyecto p {
+        font-size: 11px;
+        margin-top: 8px;
+    }
+
+    .pie-proyecto {
+        gap: 12px;
+    }
+
+    .tecnologias-proyecto {
+        margin-top: 14px;
+        gap: 6px;
+    }
+
+    .tecnologias-proyecto li {
+        font-size: 9.5px;
+        padding: 4px 7px;
+    }
+
+    .boton-ver-proyecto {
+        margin-top: 14px;
+        padding: 8px 12px;
+        font-size: 10px;
+    }
+
+    /* Retoques en las tarjetas de habilidades */
+    .contenedor-habilidades {
+        gap: 16px;
+        margin-bottom: 100px;
+    }
+
+    .tarjeta-habilidad {
+        padding: 18px;
+        min-height: 190px;
+    }
+
+    .icono-habilidad {
+        width: 34px;
+        height: 34px;
+        margin-bottom: 16px;
+    }
+
+    .icono-habilidad i {
+        font-size: 14px;
+    }
+
+    .tarjeta-habilidad h3 {
+        font-size: 14.5px;
+        margin-bottom: 16px;
+    }
+
+    .tarjeta-habilidad li {
+        font-size: 11.5px;
+        margin-bottom: 8px;
+    }
+
+    /* Línea de tiempo y experiencia */
+    .elemento-linea-tiempo {
+        margin-bottom: 20px;
+    }
+
+    .tarjeta-experiencia {
+        padding: 16px;
+    }
+
+    .tarjeta-experiencia h3 {
+        font-size: 16px;
+    }
+
+    .tarjeta-experiencia h4 {
+        font-size: 11px;
+    }
+
+    .tarjeta-experiencia p {
+        font-size: 12px;
+        margin-top: 12px;
+    }
+
+    .punto-linea {
+        width: 8px;
+        height: 8px;
+        top: 25px;
+    }
+
+    /* Área de contacto para laptop */
+    #contacto {
+        padding-top: 70px;
+        padding-bottom: 50px;
+    }
+
+    .tarjeta-contacto {
+        padding: 30px;
+    }
+
+    .parte-superior-contacto {
+        gap: 30px;
+    }
+
+    .texto-contacto h2 {
+        font-size: 36px;
+    }
+
+    .texto-contacto p {
+        font-size: 13px;
+    }
+
+    .boton-escribirme {
+        padding: 11px 16px;
+        font-size: 12px;
+    }
+
+    .linea-contacto {
+        margin: 28px 0 20px 0;
+    }
+
+    .links-contacto a {
+        font-size: 12px;
+    }
+}
+
+/* Media query para adaptar la página a tablets */
+@media (max-width: 900px) {
+
+    /* Más padding lateral para evitar que se pegue al borde */
+    section {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    nav {
+        width: calc(100% - 56px);
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 11px 22px;
+    }
+
+    .enlaces-navbar {
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    #inicio {
+        min-height: auto;
+        padding-top: 140px;
+        padding-bottom: 90px;
+    }
+
+    /* Paso los elementos del hero a formato columna */
+    .contenedor-de-mis-datos-hero {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 55px;
+    }
+
+    .contenido-hero {
+        max-width: 100%;
+    }
+
+    #inicio h1 {
+        font-size: 78px;
+    }
+
+    /* Centro mi foto debajo del texto en tablets */
+    .tarjeta-hero {
+        width: 100%;
+        max-width: 430px;
+        margin: 0 auto;
+    }
+
+    .contenido-sobre-mi {
+        flex-direction: column;
+    }
+
+    /* Mantengo dos columnas para los proyectos por ahora */
+    .contenedor-proyectos-articulos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .imagen-proyecto {
+        height: 200px;
+    }
+
+    /* Ajuste en los botones de los proyectos */
+    .pie-proyecto {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .boton-ver-proyecto {
+        align-self: flex-end;
+    }
+
+    /* Las habilidades pasan a ser flex con envoltura para mejor distribución */
+    .contenedor-habilidades {
+        flex-wrap: wrap;
+    }
+
+    .tarjeta-habilidad {
+        flex: 1 1 calc(50% - 10px);
+    }
+
+    .parte-superior-contacto {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+    }
+
+}
+
+/* Media query para la vista en dispositivos móviles pequeños */
+@media (max-width: 600px) {
+
+    /* Quitar excesos de padding laterales */
+    section {
+        width: 100%;
+        padding: 60px 18px;
+    }
+
+    main {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* Ajuste fino al comportamiento del scroll en el celular */
+    #sobre-mi,
+    #proyectos,
+    #habilidades,
+    #experiencia,
+    #contacto {
+        scroll-margin-top: 10px;
+    }
+
+    /* Navbar optimizado para pantallas estrechas */
+    nav {
+        width: auto;
+        max-width: none;
+        margin: 10px;
+        padding: 8px 12px;
+        border-radius: 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .iniciales-navbar {
+        flex-shrink: 0;
+    }
+
+    header::before {
+        height: 12px;
+    }
+
+    .iniciales-navbar a {
+        font-size: 17px;
+    }
+
+    /* Preparo el scroll infinito nativo para el navbar */
+    .enlaces-navbar {
+        display: flex;
+        overflow-x: auto;
+        gap: 12px;
+        align-items: center;
+        width: 156px;
+        max-width: 156px;
+        margin-left: auto;
+        scroll-snap-type: x mandatory;
+
+        /* Efecto difuminado en los laterales para esconder el scroll */
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%);
+        mask-image: linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%);
+
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Oculto la barra clásica del navegador */
+    .enlaces-navbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .enlaces-navbar a {
+        display: inline-flex;
+        flex-shrink: 0;
+        width: 76px;
+        justify-content: center;
+        white-space: nowrap;
+        font-size: 11px;
+        scroll-snap-align: center;
+    }
+
+    .boton-navbar {
+        padding: 8px 0;
+        background-color: transparent;
+        border: none;
+        color: #fdfdfd;
+    }
+
+    /* Hero principal en formato vertical */
+    #inicio {
+        min-height: auto;
+        padding-top: 75px;
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-bottom: 40px;
+    }
+
+    .contenedor-de-mis-datos-hero {
+        display: grid;
+        width: 100%;
+        min-width: 0;
+        gap: 0;
+    }
+
+    .contenido-hero {
+        display: contents;
+    }
+
+    .cabecera-hero {
+        order: 1;
+        width: 100%;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .estado-disponibilidad {
+        width: max-content;
+        max-width: 100%;
+        justify-self: center;
+        margin: 0;
+        padding: 5px 7px;
+        gap: 5px;
+    }
+
+    .estado-disponibilidad span {
+        width: 5px;
+        height: 5px;
+        flex-shrink: 0;
+    }
+
+    .estado-disponibilidad p {
+        font-size: 7px;
+        white-space: nowrap;
+    }
+
+    .etiqueta-portafolio {
+        justify-self: center;
+        margin: 0;
+        font-size: 8px;
+        letter-spacing: 1.5px;
+        white-space: nowrap;
+    }
+
+    /* Mi foto de perfil se ubica debajo de las etiquetas en celular */
+    .tarjeta-hero {
+        order: 2;
+        width: min(70%, 255px);
+        max-width: 255px;
+        margin: 0 auto 18px auto;
+        padding: 10px;
+        border-radius: 16px;
+    }
+
+    .contenedor-foto-perfil {
+        margin-bottom: 10px;
+    }
+
+    .contenedor-foto-perfil img {
+        border-radius: 11px;
+        aspect-ratio: 1 / 1;
+        object-position: center 150%, 20%;
+    }
+
+    .dato-perfil {
+        gap: 8px;
+        padding: 7px 1px;
+    }
+
+    .dato-perfil span {
+        font-size: 8px;
+    }
+
+    .dato-perfil p {
+        font-size: 8px;
+    }
+
+    /* Reordeno la vista en flex para el nombre y título */
+    #inicio h1 {
+        order: 3;
+        width: 100%;
+        margin: 0 0 12px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        font-size: 33px;
+        line-height: 1;
+        letter-spacing: -2px;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    #inicio h1 span {
+        display: inline;
+    }
+
+    #inicio h2 {
+        order: 4;
+        margin: 0 0 13px 0;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .descripcion-hero {
+        order: 5;
+        width: 100%;
+        max-width: 330px;
+        margin: 0 auto;
+        font-size: 11px;
+        line-height: 1.65;
+        text-align: center;
+    }
+
+    /* Botones más amigables al toque */
+    .botones-hero {
+        order: 6;
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .botones-hero a {
+        width: auto;
+        min-width: 0;
+        min-height: 38px;
+        flex: 1;
+        padding: 0 9px;
+        border-radius: 9px;
+        font-size: 10px;
+    }
+
+    .boton-secundario {
+        order: 1;
+    }
+
+    .boton-principal {
+        order: 2;
+    }
+
+    /* Uso la clase para pantallas móviles para el enlace a mi WhatsApp */
+    .whatsapp-escritorio {
+        display: none;
+    }
+
+    .whatsapp-movil {
+        display: inline;
+    }
+
+    .redes-hero {
+        order: 7;
+        justify-content: center;
+        margin-top: 14px;
+        gap: 7px;
+    }
+
+    .redes-hero a {
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+    }
+
+    .redes-hero i {
+        font-size: 13px;
+    }
+
+    /* Títulos generales */
+    .contenedor-sobre-mi h2,
+    .contenedor-proyectos>h2,
+    .contenedor-seccion-habilidades h2,
+    .contenedor-experiencia>h2 {
+        margin-bottom: 28px;
+        font-size: 34px;
+        letter-spacing: -2px;
+    }
+
+    .descripcion-seccion {
+        margin-top: -17px;
+        margin-bottom: 28px;
+        font-size: 11px;
+    }
+
+    /* Contenedores a full width para celular */
+    .contenido-sobre-mi {
+        width: 100%;
+        gap: 13px;
+    }
+
+    .tarjeta-sobre-mi {
+        width: 100%;
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .texto-destacado-sobre-mi {
+        margin-bottom: 20px;
+        font-size: 19px;
+        line-height: 1.35;
+    }
+
+    .tarjeta-sobre-mi p:not(.texto-destacado-sobre-mi) {
+        margin-bottom: 12px;
+        font-size: 10px;
+        line-height: 1.65;
+    }
+
+    .estadisticas-sobre-mi {
+        width: 100%;
+        padding: 8px 18px;
+        border-radius: 15px;
+    }
+
+    .estadistica {
+        min-height: 52px;
+        padding: 9px 0;
+        display: grid;
+        grid-template-columns: 72px 1fr;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .estadistica:first-child {
+        padding-top: 9px;
+    }
+
+    .estadistica:last-child {
+        padding-bottom: 9px;
+    }
+
+    .estadistica strong {
+        margin: 0;
+        font-size: 25px;
+        line-height: 1;
+        text-align: left;
+    }
+
+    .estadistica span {
+        font-size: 10px;
+        line-height: 1.3;
+        text-align: left;
+        color: #c2c2c7;
+    }
+
+    /* Los proyectos pasan a una sola columna */
+    .contenedor-proyectos {
+        width: 100%;
+    }
+
+    .contenedor-proyectos-articulos {
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .proyecto {
+        width: 100%;
+        min-width: 0;
+        border-radius: 15px;
+    }
+
+    .imagen-proyecto {
+        height: 175px;
+    }
+
+    .contenido-proyecto {
+        padding: 17px;
+    }
+
+    .tipo-proyecto {
+        font-size: 8px;
+        letter-spacing: 3px;
+    }
+
+    .links-proyecto a {
+        width: 31px;
+        height: 31px;
+    }
+
+    .proyecto h3 {
+        margin: 13px 0 7px 0;
+        font-size: 19px;
+    }
+
+    .proyecto>.contenido-proyecto>p {
+        min-height: auto;
+        font-size: 10px;
+        line-height: 1.6;
+    }
+
+    .participacion-proyecto {
+        margin-top: 16px;
+        padding: 12px;
+    }
+
+    .participacion-proyecto strong {
+        font-size: 9px;
+    }
+
+    .participacion-proyecto p {
+        margin-top: 7px;
+        font-size: 9px;
+    }
+
+    .pie-proyecto {
+        width: 100%;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 8px;
+    }
+
+    .tecnologias-proyecto {
+        gap: 4px;
+        margin-top: 14px;
+    }
+
+    .tecnologias-proyecto li {
+        padding: 4px 6px;
+        font-size: 8px;
+    }
+
+    .boton-ver-proyecto {
+        align-self: flex-end;
+        margin-top: 14px;
+        padding: 7px 9px;
+        gap: 5px;
+        border: 1px solid #eeeeee;
+        background-color: #eeeeee;
+        color: #151515;
+        font-size: 8px;
+        font-weight: 600;
+    }
+
+    .boton-ver-proyecto i {
+        font-size: 7px;
+    }
+
+    /* Redimensiono la visualización de mis habilidades */
+    .contenedor-habilidades {
+        width: 100%;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    .tarjeta-habilidad {
+        width: 100%;
+        min-height: auto;
+        padding: 16px 18px;
+        display: grid;
+        grid-template-columns: 92px minmax(0, 1fr);
+        align-items: center;
+        gap: 16px;
+        border-radius: 15px;
+    }
+
+    .cabecera-habilidad {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .icono-habilidad {
+        width: 48px;
+        height: 48px;
+        margin: 0 0 9px 0;
+        border-radius: 11px;
+    }
+
+    .icono-habilidad i {
+        font-size: 20px;
+    }
+
+    .tarjeta-habilidad h3 {
+        margin: 0;
+        font-size: 13px;
+    }
+
+    .tarjeta-habilidad ul {
+        width: 100%;
+        margin: 0;
+        padding-left: 16px;
+    }
+
+    .tarjeta-habilidad li {
+        margin-bottom: 6px;
+        font-size: 10px;
+        line-height: 1.35;
+    }
+
+    .tarjeta-habilidad li:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Ajuste en el espaciado de mi línea de tiempo */
+    .linea-tiempo {
+        width: 100%;
+        padding-left: 23px;
+    }
+
+    .punto-linea {
+        width: 7px;
+        height: 7px;
+        left: -27px;
+        top: 24px;
+    }
+
+    .tarjeta-experiencia {
+        padding: 17px;
+        border-radius: 13px;
+    }
+
+    .tarjeta-experiencia>span {
+        font-size: 7px;
+        letter-spacing: 3px;
+    }
+
+    .tarjeta-experiencia h3 {
+        margin-top: 9px;
+        font-size: 16px;
+    }
+
+    .tarjeta-experiencia h4 {
+        font-size: 9px;
+    }
+
+    .tarjeta-experiencia p {
+        margin-top: 12px;
+        font-size: 9px;
+        line-height: 1.6;
+    }
+
+    .boton-cv {
+        margin-top: 24px;
+        padding: 8px 12px;
+        font-size: 9px;
+    }
+
+    /* Área de contacto en dispositivos móviles */
+    #contacto {
+        padding-top: 55px;
+        padding-bottom: 40px;
+    }
+
+    .tarjeta-contacto {
+        width: 100%;
+        padding: 19px;
+        border-radius: 15px;
+    }
+
+    .parte-superior-contacto {
+        gap: 18px;
+    }
+
+    .texto-contacto h2 {
+        font-size: 29px;
+        letter-spacing: -2px;
+    }
+
+    .texto-contacto p {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+
+    .boton-escribirme {
+        width: auto;
+        padding: 9px 13px;
+        justify-content: center;
+        font-size: 9px;
+    }
+
+    .linea-contacto {
+        margin: 23px 0 16px 0;
+    }
+
+    .links-contacto {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .links-contacto a {
+        max-width: 100%;
+        font-size: 9px;
+        word-break: break-word;
+    }
+
+    .links-contacto i {
+        font-size: 10px;
+    }
+
+    /* Ajustes finales al footer */
+    footer {
+        width: 100%;
+        padding: 0 18px 16px 18px;
+    }
+
+    .contenedor-footer {
+        width: 100%;
+        padding-top: 13px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        font-size: 8px;
+    }
+
+    .contenedor-footer p {
+        white-space: nowrap;
+    }
+
+    .contenedor-footer a {
+        flex-shrink: 0;
+        font-size: 8px;
+    }
+
+    .contenedor-footer i {
+        font-size: 6px;
+    }
+
+}
+
+/* Media query final para celulares muy compactos (pantallas pequeñas) */
+@media (max-width: 380px) {
+
+    .cabecera-hero {
+        gap: 4px;
+    }
+
+    .estado-disponibilidad {
+        padding: 5px 6px;
+    }
+
+    .estado-disponibilidad p {
+        font-size: 6.5px;
+    }
+
+    .etiqueta-portafolio {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .tarjeta-hero {
+        width: min(72%, 240px);
+    }
+
+    #inicio h1 {
+        font-size: 31px;
+        gap: 6px;
+        letter-spacing: -2px;
+    }
+
+    .botones-hero a {
+        padding: 0 7px;
+        font-size: 9px;
+    }
+
+    .estadistica {
+        grid-template-columns: 65px 1fr;
+    }
+
+    .tarjeta-habilidad {
+        grid-template-columns: 84px minmax(0, 1fr);
+        gap: 12px;
+    }
+
+}
